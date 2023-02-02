@@ -20,11 +20,13 @@ namespace appNegoSudWinForms.Models
         public DateTime DateModification { get; set; }
 
         public int? MagasinId { get; set; }
-        public Magasin? Magasin { get; set; }
+        //public Magasin? Magasin { get; set; }
 
-        public IList<Produit>? Produits { get; set; }
+       // public IList<Produit>? Produits { get; set; }
 
-        public Inventaire(int id, string? nom, string? appelation, string? couleur, string? classement, string? millesime, string? position, int quantiteStock, DateTime dateCreation, DateTime dateModification, int? magasinId, Magasin? magasin, IList<Produit>? produits)
+        public Inventaire(int id, string? nom, string? appelation, string? couleur, string? classement, string? millesime, string? position, int quantiteStock, DateTime dateCreation, DateTime dateModification, int? magasinId 
+           // Magasin? magasin, IList<Produit>? produits
+            )
         {
             Id = id;
             Nom = nom;
@@ -37,8 +39,8 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             MagasinId = magasinId;
-            Magasin = magasin;
-            Produits = produits;
+           // Magasin = magasin;
+           // Produits = produits;
         }
     }
 }
