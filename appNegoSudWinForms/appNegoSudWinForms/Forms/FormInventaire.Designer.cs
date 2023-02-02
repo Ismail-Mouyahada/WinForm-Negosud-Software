@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNomProduitProduit = new System.Windows.Forms.Label();
             this.tabPageInventaire = new System.Windows.Forms.TabPage();
             this.textBoxmagasinIdInventaire = new System.Windows.Forms.TextBox();
@@ -110,39 +110,39 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.dataGridViewProduit = new System.Windows.Forms.DataGridView();
-            this.tabPageFournisseur = new System.Windows.Forms.TabPage();
-            this.btnEditFournisseur = new System.Windows.Forms.Button();
-            this.btnDeleteFournisseur = new System.Windows.Forms.Button();
-            this.btnAddFournisseur = new System.Windows.Forms.Button();
-            this.textBoxReputationFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxPaysFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxRegionFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxVilleFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxAdresseFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxEmailFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxFixeFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxRueFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxTelephoneFournisseur = new System.Windows.Forms.TextBox();
-            this.textBoxNomFournisseur = new System.Windows.Forms.TextBox();
-            this.lblReputationFournisseur = new System.Windows.Forms.Label();
-            this.lblPaysFournisseur = new System.Windows.Forms.Label();
-            this.lblRegion = new System.Windows.Forms.Label();
-            this.lblVilleFournisseur = new System.Windows.Forms.Label();
-            this.lblEmailFournisseur = new System.Windows.Forms.Label();
-            this.lblFixeFournisseur = new System.Windows.Forms.Label();
-            this.lblAdresseFournisseur = new System.Windows.Forms.Label();
-            this.lblRueFournisseur = new System.Windows.Forms.Label();
-            this.lblTelephoneFournisseur = new System.Windows.Forms.Label();
-            this.lblNomFournisseur = new System.Windows.Forms.Label();
-            this.lblFournisseur = new System.Windows.Forms.Label();
-            this.dataGridViewFournisseur = new System.Windows.Forms.DataGridView();
+            this.tabPageMagasin = new System.Windows.Forms.TabPage();
+            this.textBoxProducteurIdMagasin = new System.Windows.Forms.TextBox();
+            this.labelProducteurIdMagasin = new System.Windows.Forms.Label();
+            this.btnEditMagasin = new System.Windows.Forms.Button();
+            this.btnDeleteMagasin = new System.Windows.Forms.Button();
+            this.btnAddMagasin = new System.Windows.Forms.Button();
+            this.textBoxPaysMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxRegionMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxCodePostalMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxAdresseMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxTelephoneMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxFixeMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxRueMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxEmailMagasin = new System.Windows.Forms.TextBox();
+            this.textBoxNomMagasin = new System.Windows.Forms.TextBox();
+            this.lblPaysMagasin = new System.Windows.Forms.Label();
+            this.lblRegionMagasin = new System.Windows.Forms.Label();
+            this.lblCodePostalMagasin = new System.Windows.Forms.Label();
+            this.lblTelephoneMagasin = new System.Windows.Forms.Label();
+            this.lblFixeMagasin = new System.Windows.Forms.Label();
+            this.lblAdresseMagasin = new System.Windows.Forms.Label();
+            this.lblRueMagasin = new System.Windows.Forms.Label();
+            this.lblEmailMagasin = new System.Windows.Forms.Label();
+            this.lblNomMagasin = new System.Windows.Forms.Label();
+            this.lblMagasin = new System.Windows.Forms.Label();
+            this.dataGridViewMagasin = new System.Windows.Forms.DataGridView();
             this.tabPageInventaire.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventaire)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPageProduit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduit)).BeginInit();
-            this.tabPageFournisseur.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFournisseur)).BeginInit();
+            this.tabPageMagasin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMagasin)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomProduitProduit
@@ -450,7 +450,7 @@
             // 
             this.tabControl.Controls.Add(this.tabPageInventaire);
             this.tabControl.Controls.Add(this.tabPageProduit);
-            this.tabControl.Controls.Add(this.tabPageFournisseur);
+            this.tabControl.Controls.Add(this.tabPageMagasin);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl.ItemSize = new System.Drawing.Size(71, 20);
@@ -976,344 +976,15 @@
             this.dataGridViewProduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.dataGridViewProduit.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewProduit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridViewProduit.ColumnHeadersHeight = 30;
-            this.dataGridViewProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProduit.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewProduit.EnableHeadersVisualStyles = false;
-            this.dataGridViewProduit.Location = new System.Drawing.Point(27, 359);
-            this.dataGridViewProduit.Name = "dataGridViewProduit";
-            this.dataGridViewProduit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProduit.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridViewProduit.RowHeadersVisible = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(9)))));
-            this.dataGridViewProduit.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridViewProduit.RowTemplate.Height = 25;
-            this.dataGridViewProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewProduit.Size = new System.Drawing.Size(739, 46);
-            this.dataGridViewProduit.TabIndex = 0;
-            this.dataGridViewProduit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduit_CellClick);
-            // 
-            // tabPageFournisseur
-            // 
-            this.tabPageFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.tabPageFournisseur.Controls.Add(this.btnEditFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.btnDeleteFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.btnAddFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxReputationFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxPaysFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxRegionFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxVilleFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxAdresseFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxEmailFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxFixeFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxRueFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxTelephoneFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.textBoxNomFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblReputationFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblPaysFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblRegion);
-            this.tabPageFournisseur.Controls.Add(this.lblVilleFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblEmailFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblFixeFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblAdresseFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblRueFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblTelephoneFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblNomFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.lblFournisseur);
-            this.tabPageFournisseur.Controls.Add(this.dataGridViewFournisseur);
-            this.tabPageFournisseur.Location = new System.Drawing.Point(4, 24);
-            this.tabPageFournisseur.Name = "tabPageFournisseur";
-            this.tabPageFournisseur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFournisseur.Size = new System.Drawing.Size(792, 422);
-            this.tabPageFournisseur.TabIndex = 3;
-            this.tabPageFournisseur.Text = "Fournisseurs";
-            // 
-            // btnEditFournisseur
-            // 
-            this.btnEditFournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditFournisseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(177)))), ((int)(((byte)(0)))));
-            this.btnEditFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEditFournisseur.Location = new System.Drawing.Point(518, 217);
-            this.btnEditFournisseur.Name = "btnEditFournisseur";
-            this.btnEditFournisseur.Size = new System.Drawing.Size(114, 34);
-            this.btnEditFournisseur.TabIndex = 77;
-            this.btnEditFournisseur.Text = "Modifier";
-            this.btnEditFournisseur.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteFournisseur
-            // 
-            this.btnDeleteFournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteFournisseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.btnDeleteFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeleteFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDeleteFournisseur.Location = new System.Drawing.Point(644, 217);
-            this.btnDeleteFournisseur.Name = "btnDeleteFournisseur";
-            this.btnDeleteFournisseur.Size = new System.Drawing.Size(114, 34);
-            this.btnDeleteFournisseur.TabIndex = 76;
-            this.btnDeleteFournisseur.Text = "Supprimer";
-            this.btnDeleteFournisseur.UseVisualStyleBackColor = true;
-            // 
-            // btnAddFournisseur
-            // 
-            this.btnAddFournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddFournisseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
-            this.btnAddFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddFournisseur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddFournisseur.Location = new System.Drawing.Point(394, 217);
-            this.btnAddFournisseur.Name = "btnAddFournisseur";
-            this.btnAddFournisseur.Size = new System.Drawing.Size(114, 34);
-            this.btnAddFournisseur.TabIndex = 75;
-            this.btnAddFournisseur.Text = "Ajouter";
-            this.btnAddFournisseur.UseVisualStyleBackColor = true;
-            // 
-            // textBoxReputationFournisseur
-            // 
-            this.textBoxReputationFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxReputationFournisseur.Location = new System.Drawing.Point(491, 167);
-            this.textBoxReputationFournisseur.Name = "textBoxReputationFournisseur";
-            this.textBoxReputationFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxReputationFournisseur.TabIndex = 72;
-            // 
-            // textBoxPaysFournisseur
-            // 
-            this.textBoxPaysFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPaysFournisseur.Location = new System.Drawing.Point(491, 137);
-            this.textBoxPaysFournisseur.Name = "textBoxPaysFournisseur";
-            this.textBoxPaysFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxPaysFournisseur.TabIndex = 70;
-            // 
-            // textBoxRegionFournisseur
-            // 
-            this.textBoxRegionFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxRegionFournisseur.Location = new System.Drawing.Point(491, 107);
-            this.textBoxRegionFournisseur.Name = "textBoxRegionFournisseur";
-            this.textBoxRegionFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxRegionFournisseur.TabIndex = 68;
-            // 
-            // textBoxVilleFournisseur
-            // 
-            this.textBoxVilleFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxVilleFournisseur.Location = new System.Drawing.Point(491, 77);
-            this.textBoxVilleFournisseur.Name = "textBoxVilleFournisseur";
-            this.textBoxVilleFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxVilleFournisseur.TabIndex = 66;
-            // 
-            // textBoxAdresseFournisseur
-            // 
-            this.textBoxAdresseFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxAdresseFournisseur.Location = new System.Drawing.Point(491, 47);
-            this.textBoxAdresseFournisseur.Name = "textBoxAdresseFournisseur";
-            this.textBoxAdresseFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxAdresseFournisseur.TabIndex = 65;
-            // 
-            // textBoxEmailFournisseur
-            // 
-            this.textBoxEmailFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxEmailFournisseur.Location = new System.Drawing.Point(114, 151);
-            this.textBoxEmailFournisseur.Name = "textBoxEmailFournisseur";
-            this.textBoxEmailFournisseur.Size = new System.Drawing.Size(203, 24);
-            this.textBoxEmailFournisseur.TabIndex = 62;
-            // 
-            // textBoxFixeFournisseur
-            // 
-            this.textBoxFixeFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxFixeFournisseur.Location = new System.Drawing.Point(114, 121);
-            this.textBoxFixeFournisseur.Name = "textBoxFixeFournisseur";
-            this.textBoxFixeFournisseur.Size = new System.Drawing.Size(203, 24);
-            this.textBoxFixeFournisseur.TabIndex = 60;
-            // 
-            // textBoxRueFournisseur
-            // 
-            this.textBoxRueFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxRueFournisseur.Location = new System.Drawing.Point(491, 17);
-            this.textBoxRueFournisseur.Name = "textBoxRueFournisseur";
-            this.textBoxRueFournisseur.Size = new System.Drawing.Size(254, 24);
-            this.textBoxRueFournisseur.TabIndex = 57;
-            // 
-            // textBoxTelephoneFournisseur
-            // 
-            this.textBoxTelephoneFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTelephoneFournisseur.Location = new System.Drawing.Point(114, 91);
-            this.textBoxTelephoneFournisseur.Name = "textBoxTelephoneFournisseur";
-            this.textBoxTelephoneFournisseur.Size = new System.Drawing.Size(203, 24);
-            this.textBoxTelephoneFournisseur.TabIndex = 55;
-            // 
-            // textBoxNomFournisseur
-            // 
-            this.textBoxNomFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNomFournisseur.Location = new System.Drawing.Point(163, 61);
-            this.textBoxNomFournisseur.Name = "textBoxNomFournisseur";
-            this.textBoxNomFournisseur.Size = new System.Drawing.Size(154, 24);
-            this.textBoxNomFournisseur.TabIndex = 49;
-            // 
-            // lblReputationFournisseur
-            // 
-            this.lblReputationFournisseur.AutoSize = true;
-            this.lblReputationFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblReputationFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblReputationFournisseur.Location = new System.Drawing.Point(400, 174);
-            this.lblReputationFournisseur.Name = "lblReputationFournisseur";
-            this.lblReputationFournisseur.Size = new System.Drawing.Size(88, 20);
-            this.lblReputationFournisseur.TabIndex = 71;
-            this.lblReputationFournisseur.Text = "Réputation";
-            // 
-            // lblPaysFournisseur
-            // 
-            this.lblPaysFournisseur.AutoSize = true;
-            this.lblPaysFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPaysFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblPaysFournisseur.Location = new System.Drawing.Point(431, 144);
-            this.lblPaysFournisseur.Name = "lblPaysFournisseur";
-            this.lblPaysFournisseur.Size = new System.Drawing.Size(43, 20);
-            this.lblPaysFournisseur.TabIndex = 69;
-            this.lblPaysFournisseur.Text = "Pays";
-            // 
-            // lblRegion
-            // 
-            this.lblRegion.AutoSize = true;
-            this.lblRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRegion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblRegion.Location = new System.Drawing.Point(431, 114);
-            this.lblRegion.Name = "lblRegion";
-            this.lblRegion.Size = new System.Drawing.Size(60, 20);
-            this.lblRegion.TabIndex = 67;
-            this.lblRegion.Text = "Région";
-            // 
-            // lblVilleFournisseur
-            // 
-            this.lblVilleFournisseur.AutoSize = true;
-            this.lblVilleFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVilleFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblVilleFournisseur.Location = new System.Drawing.Point(452, 84);
-            this.lblVilleFournisseur.Name = "lblVilleFournisseur";
-            this.lblVilleFournisseur.Size = new System.Drawing.Size(38, 20);
-            this.lblVilleFournisseur.TabIndex = 64;
-            this.lblVilleFournisseur.Text = "Ville";
-            // 
-            // lblEmailFournisseur
-            // 
-            this.lblEmailFournisseur.AutoSize = true;
-            this.lblEmailFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEmailFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblEmailFournisseur.Location = new System.Drawing.Point(30, 159);
-            this.lblEmailFournisseur.Name = "lblEmailFournisseur";
-            this.lblEmailFournisseur.Size = new System.Drawing.Size(48, 20);
-            this.lblEmailFournisseur.TabIndex = 63;
-            this.lblEmailFournisseur.Text = "Email";
-            // 
-            // lblFixeFournisseur
-            // 
-            this.lblFixeFournisseur.AutoSize = true;
-            this.lblFixeFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFixeFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblFixeFournisseur.Location = new System.Drawing.Point(30, 129);
-            this.lblFixeFournisseur.Name = "lblFixeFournisseur";
-            this.lblFixeFournisseur.Size = new System.Drawing.Size(38, 20);
-            this.lblFixeFournisseur.TabIndex = 61;
-            this.lblFixeFournisseur.Text = "Fixe";
-            // 
-            // lblAdresseFournisseur
-            // 
-            this.lblAdresseFournisseur.AutoSize = true;
-            this.lblAdresseFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAdresseFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblAdresseFournisseur.Location = new System.Drawing.Point(423, 50);
-            this.lblAdresseFournisseur.Name = "lblAdresseFournisseur";
-            this.lblAdresseFournisseur.Size = new System.Drawing.Size(68, 20);
-            this.lblAdresseFournisseur.TabIndex = 59;
-            this.lblAdresseFournisseur.Text = "Adresse";
-            // 
-            // lblRueFournisseur
-            // 
-            this.lblRueFournisseur.AutoSize = true;
-            this.lblRueFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRueFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblRueFournisseur.Location = new System.Drawing.Point(452, 22);
-            this.lblRueFournisseur.Name = "lblRueFournisseur";
-            this.lblRueFournisseur.Size = new System.Drawing.Size(39, 20);
-            this.lblRueFournisseur.TabIndex = 58;
-            this.lblRueFournisseur.Text = "Rue";
-            // 
-            // lblTelephoneFournisseur
-            // 
-            this.lblTelephoneFournisseur.AutoSize = true;
-            this.lblTelephoneFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTelephoneFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTelephoneFournisseur.Location = new System.Drawing.Point(30, 99);
-            this.lblTelephoneFournisseur.Name = "lblTelephoneFournisseur";
-            this.lblTelephoneFournisseur.Size = new System.Drawing.Size(84, 20);
-            this.lblTelephoneFournisseur.TabIndex = 56;
-            this.lblTelephoneFournisseur.Text = "Téléphone";
-            // 
-            // lblNomFournisseur
-            // 
-            this.lblNomFournisseur.AutoSize = true;
-            this.lblNomFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNomFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblNomFournisseur.Location = new System.Drawing.Point(30, 69);
-            this.lblNomFournisseur.Name = "lblNomFournisseur";
-            this.lblNomFournisseur.Size = new System.Drawing.Size(130, 20);
-            this.lblNomFournisseur.TabIndex = 50;
-            this.lblNomFournisseur.Text = "Nom Fournisseur";
-            // 
-            // lblFournisseur
-            // 
-            this.lblFournisseur.AutoSize = true;
-            this.lblFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFournisseur.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblFournisseur.Location = new System.Drawing.Point(23, 21);
-            this.lblFournisseur.Name = "lblFournisseur";
-            this.lblFournisseur.Size = new System.Drawing.Size(137, 25);
-            this.lblFournisseur.TabIndex = 48;
-            this.lblFournisseur.Text = "Fournisseurs";
-            // 
-            // dataGridViewFournisseur
-            // 
-            this.dataGridViewFournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewFournisseur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewFournisseur.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewFournisseur.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dataGridViewFournisseur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewFournisseur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
             dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridViewFournisseur.ColumnHeadersHeight = 30;
-            this.dataGridViewFournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridViewProduit.ColumnHeadersHeight = 30;
+            this.dataGridViewProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1321,11 +992,11 @@
             dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewFournisseur.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridViewFournisseur.EnableHeadersVisualStyles = false;
-            this.dataGridViewFournisseur.Location = new System.Drawing.Point(23, 267);
-            this.dataGridViewFournisseur.Name = "dataGridViewFournisseur";
-            this.dataGridViewFournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewProduit.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridViewProduit.EnableHeadersVisualStyles = false;
+            this.dataGridViewProduit.Location = new System.Drawing.Point(27, 359);
+            this.dataGridViewProduit.Name = "dataGridViewProduit";
+            this.dataGridViewProduit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1333,16 +1004,349 @@
             dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFournisseur.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridViewFournisseur.RowHeadersVisible = false;
+            this.dataGridViewProduit.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridViewProduit.RowHeadersVisible = false;
             dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(9)))));
-            this.dataGridViewFournisseur.RowsDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridViewFournisseur.RowTemplate.Height = 25;
-            this.dataGridViewFournisseur.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewFournisseur.Size = new System.Drawing.Size(742, 147);
-            this.dataGridViewFournisseur.TabIndex = 45;
+            this.dataGridViewProduit.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridViewProduit.RowTemplate.Height = 25;
+            this.dataGridViewProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewProduit.Size = new System.Drawing.Size(739, 46);
+            this.dataGridViewProduit.TabIndex = 0;
+            this.dataGridViewProduit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduit_CellClick);
+            // 
+            // tabPageMagasin
+            // 
+            this.tabPageMagasin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.tabPageMagasin.Controls.Add(this.textBoxProducteurIdMagasin);
+            this.tabPageMagasin.Controls.Add(this.labelProducteurIdMagasin);
+            this.tabPageMagasin.Controls.Add(this.btnEditMagasin);
+            this.tabPageMagasin.Controls.Add(this.btnDeleteMagasin);
+            this.tabPageMagasin.Controls.Add(this.btnAddMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxPaysMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxRegionMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxCodePostalMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxAdresseMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxTelephoneMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxFixeMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxRueMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxEmailMagasin);
+            this.tabPageMagasin.Controls.Add(this.textBoxNomMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblPaysMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblRegionMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblCodePostalMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblTelephoneMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblFixeMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblAdresseMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblRueMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblEmailMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblNomMagasin);
+            this.tabPageMagasin.Controls.Add(this.lblMagasin);
+            this.tabPageMagasin.Controls.Add(this.dataGridViewMagasin);
+            this.tabPageMagasin.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMagasin.Name = "tabPageMagasin";
+            this.tabPageMagasin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMagasin.Size = new System.Drawing.Size(792, 422);
+            this.tabPageMagasin.TabIndex = 3;
+            this.tabPageMagasin.Text = "Magasins";
+            // 
+            // textBoxProducteurIdMagasin
+            // 
+            this.textBoxProducteurIdMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxProducteurIdMagasin.Location = new System.Drawing.Point(491, 176);
+            this.textBoxProducteurIdMagasin.Name = "textBoxProducteurIdMagasin";
+            this.textBoxProducteurIdMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxProducteurIdMagasin.TabIndex = 79;
+            // 
+            // labelProducteurIdMagasin
+            // 
+            this.labelProducteurIdMagasin.AutoSize = true;
+            this.labelProducteurIdMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelProducteurIdMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelProducteurIdMagasin.Location = new System.Drawing.Point(384, 178);
+            this.labelProducteurIdMagasin.Name = "labelProducteurIdMagasin";
+            this.labelProducteurIdMagasin.Size = new System.Drawing.Size(101, 20);
+            this.labelProducteurIdMagasin.TabIndex = 78;
+            this.labelProducteurIdMagasin.Text = "ProducteurId";
+            // 
+            // btnEditMagasin
+            // 
+            this.btnEditMagasin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditMagasin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(177)))), ((int)(((byte)(0)))));
+            this.btnEditMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEditMagasin.Location = new System.Drawing.Point(518, 217);
+            this.btnEditMagasin.Name = "btnEditMagasin";
+            this.btnEditMagasin.Size = new System.Drawing.Size(114, 34);
+            this.btnEditMagasin.TabIndex = 77;
+            this.btnEditMagasin.Text = "Modifier";
+            this.btnEditMagasin.UseVisualStyleBackColor = true;
+            this.btnEditMagasin.Click += new System.EventHandler(this.btnEditMagasin_Click);
+            // 
+            // btnDeleteMagasin
+            // 
+            this.btnDeleteMagasin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteMagasin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnDeleteMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteMagasin.Location = new System.Drawing.Point(644, 217);
+            this.btnDeleteMagasin.Name = "btnDeleteMagasin";
+            this.btnDeleteMagasin.Size = new System.Drawing.Size(114, 34);
+            this.btnDeleteMagasin.TabIndex = 76;
+            this.btnDeleteMagasin.Text = "Supprimer";
+            this.btnDeleteMagasin.UseVisualStyleBackColor = true;
+            this.btnDeleteMagasin.Click += new System.EventHandler(this.btnDeleteMagasin_Click);
+            // 
+            // btnAddMagasin
+            // 
+            this.btnAddMagasin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddMagasin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(198)))), ((int)(((byte)(0)))));
+            this.btnAddMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddMagasin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMagasin.Location = new System.Drawing.Point(394, 217);
+            this.btnAddMagasin.Name = "btnAddMagasin";
+            this.btnAddMagasin.Size = new System.Drawing.Size(114, 34);
+            this.btnAddMagasin.TabIndex = 75;
+            this.btnAddMagasin.Text = "Ajouter";
+            this.btnAddMagasin.UseVisualStyleBackColor = true;
+            this.btnAddMagasin.Click += new System.EventHandler(this.btnAddMagasin_Click);
+            // 
+            // textBoxPaysMagasin
+            // 
+            this.textBoxPaysMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPaysMagasin.Location = new System.Drawing.Point(491, 137);
+            this.textBoxPaysMagasin.Name = "textBoxPaysMagasin";
+            this.textBoxPaysMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxPaysMagasin.TabIndex = 70;
+            // 
+            // textBoxRegionMagasin
+            // 
+            this.textBoxRegionMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxRegionMagasin.Location = new System.Drawing.Point(491, 107);
+            this.textBoxRegionMagasin.Name = "textBoxRegionMagasin";
+            this.textBoxRegionMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxRegionMagasin.TabIndex = 68;
+            // 
+            // textBoxCodePostalMagasin
+            // 
+            this.textBoxCodePostalMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCodePostalMagasin.Location = new System.Drawing.Point(491, 77);
+            this.textBoxCodePostalMagasin.Name = "textBoxCodePostalMagasin";
+            this.textBoxCodePostalMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxCodePostalMagasin.TabIndex = 66;
+            // 
+            // textBoxAdresseMagasin
+            // 
+            this.textBoxAdresseMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAdresseMagasin.Location = new System.Drawing.Point(491, 16);
+            this.textBoxAdresseMagasin.Name = "textBoxAdresseMagasin";
+            this.textBoxAdresseMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxAdresseMagasin.TabIndex = 65;
+            // 
+            // textBoxTelephoneMagasin
+            // 
+            this.textBoxTelephoneMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTelephoneMagasin.Location = new System.Drawing.Point(114, 121);
+            this.textBoxTelephoneMagasin.Name = "textBoxTelephoneMagasin";
+            this.textBoxTelephoneMagasin.Size = new System.Drawing.Size(203, 24);
+            this.textBoxTelephoneMagasin.TabIndex = 62;
+            // 
+            // textBoxFixeMagasin
+            // 
+            this.textBoxFixeMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxFixeMagasin.Location = new System.Drawing.Point(114, 151);
+            this.textBoxFixeMagasin.Name = "textBoxFixeMagasin";
+            this.textBoxFixeMagasin.Size = new System.Drawing.Size(203, 24);
+            this.textBoxFixeMagasin.TabIndex = 60;
+            // 
+            // textBoxRueMagasin
+            // 
+            this.textBoxRueMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxRueMagasin.Location = new System.Drawing.Point(491, 46);
+            this.textBoxRueMagasin.Name = "textBoxRueMagasin";
+            this.textBoxRueMagasin.Size = new System.Drawing.Size(254, 24);
+            this.textBoxRueMagasin.TabIndex = 57;
+            // 
+            // textBoxEmailMagasin
+            // 
+            this.textBoxEmailMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxEmailMagasin.Location = new System.Drawing.Point(114, 91);
+            this.textBoxEmailMagasin.Name = "textBoxEmailMagasin";
+            this.textBoxEmailMagasin.Size = new System.Drawing.Size(203, 24);
+            this.textBoxEmailMagasin.TabIndex = 55;
+            // 
+            // textBoxNomMagasin
+            // 
+            this.textBoxNomMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNomMagasin.Location = new System.Drawing.Point(163, 61);
+            this.textBoxNomMagasin.Name = "textBoxNomMagasin";
+            this.textBoxNomMagasin.Size = new System.Drawing.Size(154, 24);
+            this.textBoxNomMagasin.TabIndex = 49;
+            // 
+            // lblPaysMagasin
+            // 
+            this.lblPaysMagasin.AutoSize = true;
+            this.lblPaysMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPaysMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblPaysMagasin.Location = new System.Drawing.Point(442, 141);
+            this.lblPaysMagasin.Name = "lblPaysMagasin";
+            this.lblPaysMagasin.Size = new System.Drawing.Size(43, 20);
+            this.lblPaysMagasin.TabIndex = 69;
+            this.lblPaysMagasin.Text = "Pays";
+            // 
+            // lblRegionMagasin
+            // 
+            this.lblRegionMagasin.AutoSize = true;
+            this.lblRegionMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRegionMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblRegionMagasin.Location = new System.Drawing.Point(431, 114);
+            this.lblRegionMagasin.Name = "lblRegionMagasin";
+            this.lblRegionMagasin.Size = new System.Drawing.Size(60, 20);
+            this.lblRegionMagasin.TabIndex = 67;
+            this.lblRegionMagasin.Text = "Région";
+            // 
+            // lblCodePostalMagasin
+            // 
+            this.lblCodePostalMagasin.AutoSize = true;
+            this.lblCodePostalMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCodePostalMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCodePostalMagasin.Location = new System.Drawing.Point(390, 79);
+            this.lblCodePostalMagasin.Name = "lblCodePostalMagasin";
+            this.lblCodePostalMagasin.Size = new System.Drawing.Size(95, 20);
+            this.lblCodePostalMagasin.TabIndex = 64;
+            this.lblCodePostalMagasin.Text = "Code Postal";
+            // 
+            // lblTelephoneMagasin
+            // 
+            this.lblTelephoneMagasin.AutoSize = true;
+            this.lblTelephoneMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTelephoneMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTelephoneMagasin.Location = new System.Drawing.Point(23, 123);
+            this.lblTelephoneMagasin.Name = "lblTelephoneMagasin";
+            this.lblTelephoneMagasin.Size = new System.Drawing.Size(84, 20);
+            this.lblTelephoneMagasin.TabIndex = 63;
+            this.lblTelephoneMagasin.Text = "Téléphone";
+            // 
+            // lblFixeMagasin
+            // 
+            this.lblFixeMagasin.AutoSize = true;
+            this.lblFixeMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFixeMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblFixeMagasin.Location = new System.Drawing.Point(70, 153);
+            this.lblFixeMagasin.Name = "lblFixeMagasin";
+            this.lblFixeMagasin.Size = new System.Drawing.Size(38, 20);
+            this.lblFixeMagasin.TabIndex = 61;
+            this.lblFixeMagasin.Text = "Fixe";
+            // 
+            // lblAdresseMagasin
+            // 
+            this.lblAdresseMagasin.AutoSize = true;
+            this.lblAdresseMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdresseMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblAdresseMagasin.Location = new System.Drawing.Point(417, 18);
+            this.lblAdresseMagasin.Name = "lblAdresseMagasin";
+            this.lblAdresseMagasin.Size = new System.Drawing.Size(68, 20);
+            this.lblAdresseMagasin.TabIndex = 59;
+            this.lblAdresseMagasin.Text = "Adresse";
+            // 
+            // lblRueMagasin
+            // 
+            this.lblRueMagasin.AutoSize = true;
+            this.lblRueMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRueMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblRueMagasin.Location = new System.Drawing.Point(446, 50);
+            this.lblRueMagasin.Name = "lblRueMagasin";
+            this.lblRueMagasin.Size = new System.Drawing.Size(39, 20);
+            this.lblRueMagasin.TabIndex = 58;
+            this.lblRueMagasin.Text = "Rue";
+            // 
+            // lblEmailMagasin
+            // 
+            this.lblEmailMagasin.AutoSize = true;
+            this.lblEmailMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblEmailMagasin.Location = new System.Drawing.Point(60, 93);
+            this.lblEmailMagasin.Name = "lblEmailMagasin";
+            this.lblEmailMagasin.Size = new System.Drawing.Size(48, 20);
+            this.lblEmailMagasin.TabIndex = 56;
+            this.lblEmailMagasin.Text = "Email";
+            // 
+            // lblNomMagasin
+            // 
+            this.lblNomMagasin.AutoSize = true;
+            this.lblNomMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblNomMagasin.Location = new System.Drawing.Point(30, 63);
+            this.lblNomMagasin.Name = "lblNomMagasin";
+            this.lblNomMagasin.Size = new System.Drawing.Size(106, 20);
+            this.lblNomMagasin.TabIndex = 50;
+            this.lblNomMagasin.Text = "Nom Magasin";
+            // 
+            // lblMagasin
+            // 
+            this.lblMagasin.AutoSize = true;
+            this.lblMagasin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMagasin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblMagasin.Location = new System.Drawing.Point(23, 21);
+            this.lblMagasin.Name = "lblMagasin";
+            this.lblMagasin.Size = new System.Drawing.Size(105, 25);
+            this.lblMagasin.TabIndex = 48;
+            this.lblMagasin.Text = "Magasins";
+            // 
+            // dataGridViewMagasin
+            // 
+            this.dataGridViewMagasin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewMagasin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewMagasin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewMagasin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dataGridViewMagasin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewMagasin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(46)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMagasin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridViewMagasin.ColumnHeadersHeight = 30;
+            this.dataGridViewMagasin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMagasin.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewMagasin.EnableHeadersVisualStyles = false;
+            this.dataGridViewMagasin.Location = new System.Drawing.Point(23, 267);
+            this.dataGridViewMagasin.Name = "dataGridViewMagasin";
+            this.dataGridViewMagasin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMagasin.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewMagasin.RowHeadersVisible = false;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(200)))), ((int)(((byte)(9)))));
+            this.dataGridViewMagasin.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewMagasin.RowTemplate.Height = 25;
+            this.dataGridViewMagasin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMagasin.Size = new System.Drawing.Size(742, 147);
+            this.dataGridViewMagasin.TabIndex = 45;
+            this.dataGridViewMagasin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMagasin_CellClick);
             // 
             // FormInventaire
             // 
@@ -1361,9 +1365,9 @@
             this.tabPageProduit.ResumeLayout(false);
             this.tabPageProduit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduit)).EndInit();
-            this.tabPageFournisseur.ResumeLayout(false);
-            this.tabPageFournisseur.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFournisseur)).EndInit();
+            this.tabPageMagasin.ResumeLayout(false);
+            this.tabPageMagasin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMagasin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1423,32 +1427,30 @@
         private Button button8;
         private Button button9;
         private DataGridView dataGridViewProduit;
-        private TabPage tabPageFournisseur;
-        private Button btnEditFournisseur;
-        private Button btnDeleteFournisseur;
-        private Button btnAddFournisseur;
-        private TextBox textBoxReputationFournisseur;
-        private TextBox textBoxPaysFournisseur;
-        private TextBox textBoxRegionFournisseur;
-        private TextBox textBoxVilleFournisseur;
-        private TextBox textBoxAdresseFournisseur;
-        private TextBox textBoxEmailFournisseur;
-        private TextBox textBoxFixeFournisseur;
-        private TextBox textBoxRueFournisseur;
-        private TextBox textBoxTelephoneFournisseur;
-        private TextBox textBoxNomFournisseur;
-        private Label lblReputationFournisseur;
-        private Label lblPaysFournisseur;
-        private Label lblRegion;
-        private Label lblVilleFournisseur;
-        private Label lblEmailFournisseur;
-        private Label lblFixeFournisseur;
-        private Label lblAdresseFournisseur;
-        private Label lblRueFournisseur;
-        private Label lblTelephoneFournisseur;
-        private Label lblNomFournisseur;
-        private Label lblFournisseur;
-        private DataGridView dataGridViewFournisseur;
+        private TabPage tabPageMagasin;
+        private Button btnEditMagasin;
+        private Button btnDeleteMagasin;
+        private Button btnAddMagasin;
+        private TextBox textBoxPaysMagasin;
+        private TextBox textBoxRegionMagasin;
+        private TextBox textBoxCodePostalMagasin;
+        private TextBox textBoxAdresseMagasin;
+        private TextBox textBoxTelephoneMagasin;
+        private TextBox textBoxFixeMagasin;
+        private TextBox textBoxRueMagasin;
+        private TextBox textBoxEmailMagasin;
+        private TextBox textBoxNomMagasin;
+        private Label lblPaysMagasin;
+        private Label lblRegionMagasin;
+        private Label lblCodePostalMagasin;
+        private Label lblTelephoneMagasin;
+        private Label lblFixeMagasin;
+        private Label lblAdresseMagasin;
+        private Label lblRueMagasin;
+        private Label lblEmailMagasin;
+        private Label lblNomMagasin;
+        private Label lblMagasin;
+        private DataGridView dataGridViewMagasin;
         private TextBox textBoxPositionInventaire;
         private Label lblPositionInventaire;
         private TextBox textBoxMillesimeInventaire;
@@ -1466,5 +1468,7 @@
         private Label lblCategorieIdProduit;
         private TextBox textBoxProducteurIdProduit;
         private Label lblProducteurIdProduit;
+        private TextBox textBoxProducteurIdMagasin;
+        private Label labelProducteurIdMagasin;
     }
 }

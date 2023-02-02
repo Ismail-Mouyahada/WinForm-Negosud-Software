@@ -19,7 +19,7 @@ namespace appNegoSudWinForms.Forms
 
         string urlInventaire = "http://195.154.113.18:8000/api/Inventaires/";
         string urlProduit = "http://195.154.113.18:8000/api/Produits/";
-       // string urlFournisseur = "http://195.154.113.18:8000/api/Fournisseurs/";
+        string urlMagasin = "http://195.154.113.18:8000/api/Magasins/";
         string token = Properties.Settings.Default.token;
 
 
@@ -37,7 +37,7 @@ namespace appNegoSudWinForms.Forms
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage responseInventaire = await client.GetAsync(urlInventaire);
                     HttpResponseMessage responseProduit = await client.GetAsync(urlProduit);
-                  //  HttpResponseMessage responseFournisseur = await client.GetAsync(urlFournisseur);
+                    HttpResponseMessage responseMagasin = await client.GetAsync(urlMagasin);
 
                     if (responseInventaire.IsSuccessStatusCode)
                     {
@@ -61,18 +61,18 @@ namespace appNegoSudWinForms.Forms
                     {
                         Console.WriteLine("Echec de la requête : " + responseProduit.StatusCode);
                     }
-                  //
-                  //  if (responseFournisseur.IsSuccessStatusCode)
-                  //  {
-                  //      string result2 = await responseFournisseur.Content.ReadAsStringAsync();
-                  //      List<Fournisseur?> fournisseurs = JsonConvert.DeserializeObject<List<Fournisseur?>>(result2);
-                  //      dataGridViewFournisseur.DataSource = fournisseurs;
-                  //  }
-                  //
-                  //  else
-                  //  {
-                  //      Console.WriteLine("Echec de la requête : " + responseFournisseur.StatusCode);
-                  //  }
+                  
+                    if (responseMagasin.IsSuccessStatusCode)
+                    {
+                        string result2 = await responseMagasin.Content.ReadAsStringAsync();
+                        List<Magasin?> magasins = JsonConvert.DeserializeObject<List<Magasin?>>(result2);
+                        dataGridViewMagasin.DataSource = magasins;
+                    }
+                  
+                    else
+                    {
+                        Console.WriteLine("Echec de la requête : " + responseMagasin.StatusCode);
+                    }
                 }
             }
             catch (Exception ex)
@@ -441,26 +441,26 @@ namespace appNegoSudWinForms.Forms
                     var values = new Dictionary<string, dynamic>
                     {
                         { "id", selectedId },
-                         { "sKU", textBoxSkuProduit.Text },
-                            { "nomProduit", textBoxNomProduitProduit.Text },
-                            { "resumee", textBoxResumeeProduit.Text },
-                            { "description", textBoxDescriptionProduit.Text },
-                            { "prix_unitaire", textBoxPrixUnitaireProduit.Text },
-                            { "prix_carton", textBoxPrixCartonProduit.Text },
-                            { "tVA", textBoxTvaProduit.Text },
-                            { "remise", textBoxRemiseProduit.Text },
-                         //   { "imagePrincipal", textBoxmagasinIdInventaire.Text },
-                            { "ancien", textBoxAncienProduit.Text },
-                            { "region", textBoxRegionProduit.Text },
-                            { "couleur", textBoxCouleurProduit.Text },
-                            { "raisins", textBoxRaisinsProduit.Text },
-                            { "alcool", textBoxAlcoolProduit.Text },
-                            { "aliments", textBoxAlimentProduit.Text },
-                            { "conservation", textBoxConservationProduit.Text },
-                            { "expiration", textBoxExpirationProduit.Text },
-                            { "volume", textBoxVolumeProduit.Text },
-                            { "producteurId", textBoxProducteurIdProduit.Text },
-                            { "categorieId", textBoxCategorieIdProduit.Text },
+                        { "sKU", textBoxSkuProduit.Text },
+                        { "nomProduit", textBoxNomProduitProduit.Text },
+                        { "resumee", textBoxResumeeProduit.Text },
+                        { "description", textBoxDescriptionProduit.Text },
+                        { "prix_unitaire", textBoxPrixUnitaireProduit.Text },
+                        { "prix_carton", textBoxPrixCartonProduit.Text },
+                        { "tVA", textBoxTvaProduit.Text },
+                        { "remise", textBoxRemiseProduit.Text },
+                        //{ "imagePrincipal", textBoxmagasinIdInventaire.Text },
+                        { "ancien", textBoxAncienProduit.Text },
+                        { "region", textBoxRegionProduit.Text },
+                        { "couleur", textBoxCouleurProduit.Text },
+                        { "raisins", textBoxRaisinsProduit.Text },
+                        { "alcool", textBoxAlcoolProduit.Text },
+                        { "aliments", textBoxAlimentProduit.Text },
+                        { "conservation", textBoxConservationProduit.Text },
+                        { "expiration", textBoxExpirationProduit.Text },
+                        { "volume", textBoxVolumeProduit.Text },
+                        { "producteurId", textBoxProducteurIdProduit.Text },
+                        { "categorieId", textBoxCategorieIdProduit.Text },
                     };
 
 
@@ -548,6 +548,200 @@ namespace appNegoSudWinForms.Forms
                         textBoxVolumeProduit.Clear();
                         textBoxProducteurIdProduit.Clear();
                         textBoxCategorieIdProduit.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la suppression de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private void dataGridViewMagasin_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewMagasin.Rows[rowIndex];
+                selectedId = row.Cells[0].Value.ToString();
+
+                textBoxNomMagasin.Text = row.Cells[1].Value.ToString();
+                selectedName = textBoxNomMagasin.Text;
+                textBoxEmailMagasin.Text = row.Cells[2].Value.ToString();
+                textBoxTelephoneMagasin.Text = row.Cells[3].Value.ToString();
+                textBoxFixeMagasin.Text = row.Cells[4].Value.ToString();
+                textBoxAdresseMagasin.Text = row.Cells[5].Value.ToString();
+                textBoxRueMagasin.Text = row.Cells[6].Value.ToString();
+                textBoxCodePostalMagasin.Text = row.Cells[7].Value.ToString();
+                textBoxRegionMagasin.Text = row.Cells[8].Value.ToString();
+                textBoxPaysMagasin.Text = row.Cells[9].Value.ToString();
+                textBoxProducteurIdMagasin.Text = row.Cells[12].Value.ToString();
+              
+
+                //  selectedName = textBoxNomCategorie.Text;
+                // MessageBox.Show("L'ID de la catégorie sélectionnée est : " + selectedId);
+            }
+            else { }
+        }
+
+        private async void btnAddMagasin_Click(object sender, EventArgs e)
+        {
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<string, string>
+                        {
+                            { "nomMagasin", textBoxNomMagasin.Text },
+                            { "email", textBoxEmailMagasin.Text },
+                            { "tel", textBoxTelephoneMagasin.Text },
+                            { "fix", textBoxFixeMagasin.Text },
+                            { "adresse", textBoxAdresseMagasin.Text },
+                            { "rue", textBoxRueMagasin.Text },
+                            { "codePostal", textBoxCodePostalMagasin.Text },
+                            { "region", textBoxRegionMagasin.Text },
+                            { "pays", textBoxPaysMagasin.Text },
+                            { "producteurId", textBoxProducteurIdMagasin.Text },
+                        };
+
+                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.PostAsync(urlMagasin, content);
+
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string result = await response.Content.ReadAsStringAsync();
+                        Magasin magasin = JsonConvert.DeserializeObject<Magasin>(result);
+
+                        string[] row = new string[] { magasin.NomMagasin, magasin.Email, magasin.Tel, magasin.Fix, magasin.Adresse, magasin.Rue, magasin.CodePostal, magasin.Region, magasin.Pays };
+
+                        MessageBox.Show("Le magasin '" + textBoxNomMagasin.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxNomMagasin.Clear();
+                        textBoxEmailMagasin.Clear();
+                        textBoxTelephoneMagasin.Clear();
+                        textBoxFixeMagasin.Clear();
+                        textBoxAdresseMagasin.Clear();
+                        textBoxRueMagasin.Clear();
+                        textBoxCodePostalMagasin.Clear();
+                        textBoxRegionMagasin.Clear();
+                        textBoxPaysMagasin.Clear();
+                        textBoxProducteurIdMagasin.Clear();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Echec de la requête : " + response.StatusCode);
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnEditMagasin_Click(object sender, EventArgs e)
+        {
+            string urlEdit = urlMagasin + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<string, dynamic>
+                    {
+                        { "id", selectedId },
+                        { "nomMagasin", textBoxNomMagasin.Text },
+                        { "email", textBoxEmailMagasin.Text },
+                        { "tel", textBoxTelephoneMagasin.Text },
+                        { "fix", textBoxFixeMagasin.Text },
+                        { "adresse", textBoxAdresseMagasin.Text },
+                        { "rue", textBoxRueMagasin.Text },
+                        { "codePostal", textBoxCodePostalMagasin.Text },
+                        { "region", textBoxRegionMagasin.Text },
+                        { "pays", textBoxPaysMagasin.Text },
+                        { "producteurId", textBoxProducteurIdMagasin.Text },
+                    };
+
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+
+
+                    HttpResponseMessage response = await client.PutAsync(urlEdit, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le magasin '" + selectedName + "' a été modifié en '" + textBoxNomMagasin.Text + "' avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxNomMagasin.Clear();
+                        textBoxEmailMagasin.Clear();
+                        textBoxTelephoneMagasin.Clear();
+                        textBoxFixeMagasin.Clear();
+                        textBoxAdresseMagasin.Clear();
+                        textBoxRueMagasin.Clear();
+                        textBoxCodePostalMagasin.Clear();
+                        textBoxRegionMagasin.Clear();
+                        textBoxPaysMagasin.Clear();
+                        textBoxProducteurIdMagasin.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la modification de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnDeleteMagasin_Click(object sender, EventArgs e)
+        {
+            // Construction de l'URL pour la requête DELETE
+            string urlDelete = urlMagasin + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.DeleteAsync(urlDelete);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le magasin avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxNomMagasin.Clear();
+                        textBoxEmailMagasin.Clear();
+                        textBoxTelephoneMagasin.Clear();
+                        textBoxFixeMagasin.Clear();
+                        textBoxAdresseMagasin.Clear();
+                        textBoxRueMagasin.Clear();
+                        textBoxCodePostalMagasin.Clear();
+                        textBoxRegionMagasin.Clear();
+                        textBoxPaysMagasin.Clear();
+                        textBoxProducteurIdMagasin.Clear();
                     }
                     else
                     {
