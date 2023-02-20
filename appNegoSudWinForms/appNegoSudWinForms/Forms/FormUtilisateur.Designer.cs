@@ -182,7 +182,6 @@
             this.tabPageProducteur.Size = new System.Drawing.Size(791, 453);
             this.tabPageProducteur.TabIndex = 2;
             this.tabPageProducteur.Text = "Producteurs";
-            this.tabPageProducteur.Click += new System.EventHandler(this.tabPageProducteur_Click);
             // 
             // btnEditProducer
             // 
@@ -243,7 +242,6 @@
             this.comboBoxFournisseurProducer.Name = "comboBoxFournisseurProducer";
             this.comboBoxFournisseurProducer.Size = new System.Drawing.Size(254, 24);
             this.comboBoxFournisseurProducer.TabIndex = 41;
-            this.comboBoxFournisseurProducer.SelectedIndexChanged += new System.EventHandler(this.comboBoxFournisseurProducer_SelectedIndexChanged);
             // 
             // lblFournisseurProducer
             // 
@@ -255,7 +253,6 @@
             this.lblFournisseurProducer.Size = new System.Drawing.Size(93, 20);
             this.lblFournisseurProducer.TabIndex = 40;
             this.lblFournisseurProducer.Text = "Fournisseur";
-            this.lblFournisseurProducer.Click += new System.EventHandler(this.lblFournisseurProducer_Click);
             // 
             // textBoxReputationProducer
             // 
@@ -264,7 +261,6 @@
             this.textBoxReputationProducer.Name = "textBoxReputationProducer";
             this.textBoxReputationProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxReputationProducer.TabIndex = 39;
-            this.textBoxReputationProducer.TextChanged += new System.EventHandler(this.textBoxReputationProducer_TextChanged);
             // 
             // textBoxPaysProducer
             // 
@@ -273,7 +269,6 @@
             this.textBoxPaysProducer.Name = "textBoxPaysProducer";
             this.textBoxPaysProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxPaysProducer.TabIndex = 37;
-            this.textBoxPaysProducer.TextChanged += new System.EventHandler(this.textBoxPaysProducer_TextChanged);
             // 
             // textBoxRegionProducer
             // 
@@ -282,7 +277,6 @@
             this.textBoxRegionProducer.Name = "textBoxRegionProducer";
             this.textBoxRegionProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxRegionProducer.TabIndex = 35;
-            this.textBoxRegionProducer.TextChanged += new System.EventHandler(this.textBoxRegionProducer_TextChanged);
             // 
             // textBoxVilleProducer
             // 
@@ -291,7 +285,6 @@
             this.textBoxVilleProducer.Name = "textBoxVilleProducer";
             this.textBoxVilleProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxVilleProducer.TabIndex = 33;
-            this.textBoxVilleProducer.TextChanged += new System.EventHandler(this.textBoxVilleProducer_TextChanged);
             // 
             // textBoxAdresseProducer
             // 
@@ -300,7 +293,6 @@
             this.textBoxAdresseProducer.Name = "textBoxAdresseProducer";
             this.textBoxAdresseProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxAdresseProducer.TabIndex = 32;
-            this.textBoxAdresseProducer.TextChanged += new System.EventHandler(this.textBoxAdresseProducer_TextChanged);
             // 
             // textBoxEmailProducer
             // 
@@ -309,7 +301,6 @@
             this.textBoxEmailProducer.Name = "textBoxEmailProducer";
             this.textBoxEmailProducer.Size = new System.Drawing.Size(203, 24);
             this.textBoxEmailProducer.TabIndex = 29;
-            this.textBoxEmailProducer.TextChanged += new System.EventHandler(this.textBoxEmailProducer_TextChanged);
             // 
             // textBoxFixeProducer
             // 
@@ -318,7 +309,6 @@
             this.textBoxFixeProducer.Name = "textBoxFixeProducer";
             this.textBoxFixeProducer.Size = new System.Drawing.Size(203, 24);
             this.textBoxFixeProducer.TabIndex = 27;
-            this.textBoxFixeProducer.TextChanged += new System.EventHandler(this.textBoxFixeProducer_TextChanged);
             // 
             // textBoxRueProducer
             // 
@@ -327,7 +317,6 @@
             this.textBoxRueProducer.Name = "textBoxRueProducer";
             this.textBoxRueProducer.Size = new System.Drawing.Size(254, 24);
             this.textBoxRueProducer.TabIndex = 18;
-            this.textBoxRueProducer.TextChanged += new System.EventHandler(this.textBoxRueProducer_TextChanged);
             // 
             // textBoxTelephoneProducer
             // 
@@ -336,7 +325,6 @@
             this.textBoxTelephoneProducer.Name = "textBoxTelephoneProducer";
             this.textBoxTelephoneProducer.Size = new System.Drawing.Size(203, 24);
             this.textBoxTelephoneProducer.TabIndex = 16;
-            this.textBoxTelephoneProducer.TextChanged += new System.EventHandler(this.textBoxTelephoneProducer_TextChanged);
             // 
             // textBoxPrenomProducer
             // 
@@ -345,7 +333,6 @@
             this.textBoxPrenomProducer.Name = "textBoxPrenomProducer";
             this.textBoxPrenomProducer.Size = new System.Drawing.Size(223, 24);
             this.textBoxPrenomProducer.TabIndex = 14;
-            this.textBoxPrenomProducer.TextChanged += new System.EventHandler(this.textBoxPrenomProducer_TextChanged);
             // 
             // textBoxNomProducer
             // 
@@ -354,7 +341,6 @@
             this.textBoxNomProducer.Name = "textBoxNomProducer";
             this.textBoxNomProducer.Size = new System.Drawing.Size(223, 24);
             this.textBoxNomProducer.TabIndex = 12;
-            this.textBoxNomProducer.TextChanged += new System.EventHandler(this.textBoxNomProducer_TextChanged);
             // 
             // textBoxNomProducteurProducer
             // 
@@ -363,7 +349,6 @@
             this.textBoxNomProducteurProducer.Name = "textBoxNomProducteurProducer";
             this.textBoxNomProducteurProducer.Size = new System.Drawing.Size(167, 24);
             this.textBoxNomProducteurProducer.TabIndex = 10;
-            this.textBoxNomProducteurProducer.TextChanged += new System.EventHandler(this.textBoxNomProducteurProducer_TextChanged);
             // 
             // textBoxRaisonSocialProducer
             // 
@@ -372,7 +357,6 @@
             this.textBoxRaisonSocialProducer.Name = "textBoxRaisonSocialProducer";
             this.textBoxRaisonSocialProducer.Size = new System.Drawing.Size(167, 24);
             this.textBoxRaisonSocialProducer.TabIndex = 1;
-            this.textBoxRaisonSocialProducer.TextChanged += new System.EventHandler(this.textBoxRaisonSocialProducer_TextChanged);
             // 
             // lblReputationProducer
             // 
@@ -384,7 +368,6 @@
             this.lblReputationProducer.Size = new System.Drawing.Size(88, 20);
             this.lblReputationProducer.TabIndex = 38;
             this.lblReputationProducer.Text = "Réputation";
-            this.lblReputationProducer.Click += new System.EventHandler(this.lblReputationProducer_Click);
             // 
             // lblPays
             // 
@@ -396,7 +379,6 @@
             this.lblPays.Size = new System.Drawing.Size(43, 20);
             this.lblPays.TabIndex = 36;
             this.lblPays.Text = "Pays";
-            this.lblPays.Click += new System.EventHandler(this.lblPays_Click);
             // 
             // lblRegionProducer
             // 
@@ -408,7 +390,6 @@
             this.lblRegionProducer.Size = new System.Drawing.Size(60, 20);
             this.lblRegionProducer.TabIndex = 34;
             this.lblRegionProducer.Text = "Région";
-            this.lblRegionProducer.Click += new System.EventHandler(this.lblRegionProducer_Click);
             // 
             // lblVilleProducer
             // 
@@ -420,7 +401,6 @@
             this.lblVilleProducer.Size = new System.Drawing.Size(38, 20);
             this.lblVilleProducer.TabIndex = 31;
             this.lblVilleProducer.Text = "Ville";
-            this.lblVilleProducer.Click += new System.EventHandler(this.lblVilleProducer_Click);
             // 
             // lblEmailProducer
             // 
@@ -432,7 +412,6 @@
             this.lblEmailProducer.Size = new System.Drawing.Size(48, 20);
             this.lblEmailProducer.TabIndex = 30;
             this.lblEmailProducer.Text = "Email";
-            this.lblEmailProducer.Click += new System.EventHandler(this.lblEmailProducer_Click);
             // 
             // lblFixeProducer
             // 
@@ -444,7 +423,6 @@
             this.lblFixeProducer.Size = new System.Drawing.Size(38, 20);
             this.lblFixeProducer.TabIndex = 28;
             this.lblFixeProducer.Text = "Fixe";
-            this.lblFixeProducer.Click += new System.EventHandler(this.lblFixeProducer_Click);
             // 
             // lblAdresseProducer
             // 
@@ -456,7 +434,6 @@
             this.lblAdresseProducer.Size = new System.Drawing.Size(68, 20);
             this.lblAdresseProducer.TabIndex = 21;
             this.lblAdresseProducer.Text = "Adresse";
-            this.lblAdresseProducer.Click += new System.EventHandler(this.lblAdresseProducer_Click);
             // 
             // lblRueProducer
             // 
@@ -468,7 +445,6 @@
             this.lblRueProducer.Size = new System.Drawing.Size(39, 20);
             this.lblRueProducer.TabIndex = 19;
             this.lblRueProducer.Text = "Rue";
-            this.lblRueProducer.Click += new System.EventHandler(this.lblRueProducer_Click);
             // 
             // lblTelephoneProducer
             // 
@@ -480,7 +456,6 @@
             this.lblTelephoneProducer.Size = new System.Drawing.Size(84, 20);
             this.lblTelephoneProducer.TabIndex = 17;
             this.lblTelephoneProducer.Text = "Téléphone";
-            this.lblTelephoneProducer.Click += new System.EventHandler(this.lblTelephoneProducer_Click);
             // 
             // lblPrenomProducer
             // 
@@ -492,7 +467,6 @@
             this.lblPrenomProducer.Size = new System.Drawing.Size(64, 20);
             this.lblPrenomProducer.TabIndex = 15;
             this.lblPrenomProducer.Text = "Prenom";
-            this.lblPrenomProducer.Click += new System.EventHandler(this.lblPrenomProducer_Click);
             // 
             // lblNomProducer
             // 
@@ -504,7 +478,6 @@
             this.lblNomProducer.Size = new System.Drawing.Size(42, 20);
             this.lblNomProducer.TabIndex = 13;
             this.lblNomProducer.Text = "Nom";
-            this.lblNomProducer.Click += new System.EventHandler(this.lblNomProducer_Click);
             // 
             // lblNomProducteurProducer
             // 
@@ -516,7 +489,6 @@
             this.lblNomProducteurProducer.Size = new System.Drawing.Size(124, 20);
             this.lblNomProducteurProducer.TabIndex = 11;
             this.lblNomProducteurProducer.Text = "Nom Producteur";
-            this.lblNomProducteurProducer.Click += new System.EventHandler(this.lblNomProducteurProducer_Click);
             // 
             // button7
             // 
@@ -531,7 +503,6 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Modifier";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // lblProducteur
             // 
@@ -543,7 +514,6 @@
             this.lblProducteur.Size = new System.Drawing.Size(128, 25);
             this.lblProducteur.TabIndex = 5;
             this.lblProducteur.Text = "Producteurs";
-            this.lblProducteur.Click += new System.EventHandler(this.lblProducteur_Click);
             // 
             // button8
             // 
@@ -558,7 +528,6 @@
             this.button8.TabIndex = 4;
             this.button8.Text = "Supprimer";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -574,7 +543,6 @@
             this.button9.TabIndex = 3;
             this.button9.Text = "Ajouter";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // lblRaisonSocialProducer
             // 
@@ -586,7 +554,6 @@
             this.lblRaisonSocialProducer.Size = new System.Drawing.Size(106, 20);
             this.lblRaisonSocialProducer.TabIndex = 2;
             this.lblRaisonSocialProducer.Text = "Raison Social";
-            this.lblRaisonSocialProducer.Click += new System.EventHandler(this.lblRaisonSocialProducer_Click);
             // 
             // dataGridViewProducteur
             // 
@@ -637,7 +604,6 @@
             this.dataGridViewProducteur.Size = new System.Drawing.Size(750, 114);
             this.dataGridViewProducteur.TabIndex = 0;
             this.dataGridViewProducteur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducteur_CellClick);
-            this.dataGridViewProducteur.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducteur_CellContentClick);
             // 
             // tabPageUtilisateur
             // 
@@ -671,7 +637,6 @@
             this.tabPageUtilisateur.Size = new System.Drawing.Size(791, 453);
             this.tabPageUtilisateur.TabIndex = 0;
             this.tabPageUtilisateur.Text = "Utilisateurs";
-            this.tabPageUtilisateur.Click += new System.EventHandler(this.tabPageUtilisateur_Click);
             // 
             // lblSirenUser
             // 
@@ -683,7 +648,6 @@
             this.lblSirenUser.Size = new System.Drawing.Size(46, 20);
             this.lblSirenUser.TabIndex = 26;
             this.lblSirenUser.Text = "Siren";
-            this.lblSirenUser.Click += new System.EventHandler(this.lblSirenUser_Click);
             // 
             // textBoxSirenUser
             // 
@@ -692,7 +656,6 @@
             this.textBoxSirenUser.Name = "textBoxSirenUser";
             this.textBoxSirenUser.Size = new System.Drawing.Size(254, 24);
             this.textBoxSirenUser.TabIndex = 25;
-            this.textBoxSirenUser.TextChanged += new System.EventHandler(this.textBoxSirenUser_TextChanged);
             // 
             // textBoxMotDePasseUser
             // 
@@ -701,7 +664,6 @@
             this.textBoxMotDePasseUser.Name = "textBoxMotDePasseUser";
             this.textBoxMotDePasseUser.Size = new System.Drawing.Size(254, 24);
             this.textBoxMotDePasseUser.TabIndex = 18;
-            this.textBoxMotDePasseUser.TextChanged += new System.EventHandler(this.textBoxMotDePasseUser_TextChanged);
             // 
             // textBoxTelephoneUser
             // 
@@ -710,7 +672,6 @@
             this.textBoxTelephoneUser.Name = "textBoxTelephoneUser";
             this.textBoxTelephoneUser.Size = new System.Drawing.Size(203, 24);
             this.textBoxTelephoneUser.TabIndex = 16;
-            this.textBoxTelephoneUser.TextChanged += new System.EventHandler(this.textBoxTelephoneUser_TextChanged);
             // 
             // textBoxEmailUser
             // 
@@ -719,7 +680,6 @@
             this.textBoxEmailUser.Name = "textBoxEmailUser";
             this.textBoxEmailUser.Size = new System.Drawing.Size(223, 24);
             this.textBoxEmailUser.TabIndex = 14;
-            this.textBoxEmailUser.TextChanged += new System.EventHandler(this.textBoxEmailUser_TextChanged);
             // 
             // textBoxPrenomUser
             // 
@@ -728,7 +688,6 @@
             this.textBoxPrenomUser.Name = "textBoxPrenomUser";
             this.textBoxPrenomUser.Size = new System.Drawing.Size(223, 24);
             this.textBoxPrenomUser.TabIndex = 12;
-            this.textBoxPrenomUser.TextChanged += new System.EventHandler(this.textBoxPrenomUser_TextChanged);
             // 
             // textBoxNomUtilisateurUser
             // 
@@ -737,7 +696,6 @@
             this.textBoxNomUtilisateurUser.Name = "textBoxNomUtilisateurUser";
             this.textBoxNomUtilisateurUser.Size = new System.Drawing.Size(170, 24);
             this.textBoxNomUtilisateurUser.TabIndex = 10;
-            this.textBoxNomUtilisateurUser.TextChanged += new System.EventHandler(this.textBoxNomUtilisateurUser_TextChanged);
             // 
             // textBoxNomUser
             // 
@@ -746,7 +704,6 @@
             this.textBoxNomUser.Name = "textBoxNomUser";
             this.textBoxNomUser.Size = new System.Drawing.Size(223, 24);
             this.textBoxNomUser.TabIndex = 1;
-            this.textBoxNomUser.TextChanged += new System.EventHandler(this.textBoxNomUser_TextChanged);
             // 
             // lblIsBusinessUser
             // 
@@ -758,7 +715,6 @@
             this.lblIsBusinessUser.Size = new System.Drawing.Size(85, 20);
             this.lblIsBusinessUser.TabIndex = 24;
             this.lblIsBusinessUser.Text = "isBusiness";
-            this.lblIsBusinessUser.Click += new System.EventHandler(this.lblIsBusinessUser_Click);
             // 
             // comboBoxRoleUser
             // 
@@ -773,7 +729,6 @@
             this.comboBoxRoleUser.Name = "comboBoxRoleUser";
             this.comboBoxRoleUser.Size = new System.Drawing.Size(254, 24);
             this.comboBoxRoleUser.TabIndex = 23;
-            this.comboBoxRoleUser.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoleUser_SelectedIndexChanged);
             // 
             // checkBoxIsBusinessUser
             // 
@@ -783,7 +738,6 @@
             this.checkBoxIsBusinessUser.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIsBusinessUser.TabIndex = 22;
             this.checkBoxIsBusinessUser.UseVisualStyleBackColor = true;
-            this.checkBoxIsBusinessUser.CheckedChanged += new System.EventHandler(this.checkBoxIsBusinessUser_CheckedChanged);
             // 
             // lblRoleUser
             // 
@@ -795,7 +749,6 @@
             this.lblRoleUser.Size = new System.Drawing.Size(42, 20);
             this.lblRoleUser.TabIndex = 21;
             this.lblRoleUser.Text = "Rôle";
-            this.lblRoleUser.Click += new System.EventHandler(this.lblRoleUser_Click);
             // 
             // lblMotDePasseUser
             // 
@@ -807,7 +760,6 @@
             this.lblMotDePasseUser.Size = new System.Drawing.Size(109, 20);
             this.lblMotDePasseUser.TabIndex = 19;
             this.lblMotDePasseUser.Text = "Mot De Passe";
-            this.lblMotDePasseUser.Click += new System.EventHandler(this.lblMotDePasseUser_Click);
             // 
             // lblTelephoneUser
             // 
@@ -819,7 +771,6 @@
             this.lblTelephoneUser.Size = new System.Drawing.Size(84, 20);
             this.lblTelephoneUser.TabIndex = 17;
             this.lblTelephoneUser.Text = "Téléphone";
-            this.lblTelephoneUser.Click += new System.EventHandler(this.lblTelephoneUser_Click);
             // 
             // lblEmailUser
             // 
@@ -831,7 +782,6 @@
             this.lblEmailUser.Size = new System.Drawing.Size(48, 20);
             this.lblEmailUser.TabIndex = 15;
             this.lblEmailUser.Text = "Email";
-            this.lblEmailUser.Click += new System.EventHandler(this.lblEmailUser_Click);
             // 
             // lblPrenomUser
             // 
@@ -843,7 +793,6 @@
             this.lblPrenomUser.Size = new System.Drawing.Size(64, 20);
             this.lblPrenomUser.TabIndex = 13;
             this.lblPrenomUser.Text = "Prénom";
-            this.lblPrenomUser.Click += new System.EventHandler(this.lblPrenomUser_Click);
             // 
             // lblNomUtilisateurUser
             // 
@@ -855,7 +804,6 @@
             this.lblNomUtilisateurUser.Size = new System.Drawing.Size(117, 20);
             this.lblNomUtilisateurUser.TabIndex = 11;
             this.lblNomUtilisateurUser.Text = "Nom Utilisateur";
-            this.lblNomUtilisateurUser.Click += new System.EventHandler(this.lblNomUtilisateurUser_Click);
             // 
             // btnEditUser
             // 
@@ -870,7 +818,6 @@
             this.btnEditUser.TabIndex = 9;
             this.btnEditUser.Text = "Modifier";
             this.btnEditUser.UseVisualStyleBackColor = true;
-            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnDeleteUser
             // 
@@ -885,7 +832,6 @@
             this.btnDeleteUser.TabIndex = 8;
             this.btnDeleteUser.Text = "Supprimer";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // btnAddUser
             // 
@@ -901,7 +847,6 @@
             this.btnAddUser.TabIndex = 7;
             this.btnAddUser.Text = "Ajouter";
             this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // lblNomPage
             // 
@@ -913,7 +858,6 @@
             this.lblNomPage.Size = new System.Drawing.Size(119, 25);
             this.lblNomPage.TabIndex = 5;
             this.lblNomPage.Text = "Utilisateurs";
-            this.lblNomPage.Click += new System.EventHandler(this.lblNomPage_Click);
             // 
             // lblNomUser
             // 
@@ -925,7 +869,6 @@
             this.lblNomUser.Size = new System.Drawing.Size(42, 20);
             this.lblNomUser.TabIndex = 2;
             this.lblNomUser.Text = "Nom";
-            this.lblNomUser.Click += new System.EventHandler(this.lblNomUser_Click);
             // 
             // dataGridViewUtilisateur
             // 
@@ -976,7 +919,6 @@
             this.dataGridViewUtilisateur.Size = new System.Drawing.Size(750, 212);
             this.dataGridViewUtilisateur.TabIndex = 0;
             this.dataGridViewUtilisateur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUtilisateur_CellClick);
-            this.dataGridViewUtilisateur.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUtilisateur_CellContentClick);
             // 
             // tabControl
             // 
@@ -991,7 +933,6 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(799, 481);
             this.tabControl.TabIndex = 1;
-            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPageFournisseur
             // 
@@ -1027,7 +968,6 @@
             this.tabPageFournisseur.Size = new System.Drawing.Size(791, 453);
             this.tabPageFournisseur.TabIndex = 3;
             this.tabPageFournisseur.Text = "Fournisseurs";
-            this.tabPageFournisseur.Click += new System.EventHandler(this.tabPageFournisseur_Click);
             // 
             // btnEditFournisseur
             // 
@@ -1082,7 +1022,6 @@
             this.textBoxReputationFournisseur.Name = "textBoxReputationFournisseur";
             this.textBoxReputationFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxReputationFournisseur.TabIndex = 72;
-            this.textBoxReputationFournisseur.TextChanged += new System.EventHandler(this.textBoxReputationFournisseur_TextChanged);
             // 
             // textBoxPaysFournisseur
             // 
@@ -1091,7 +1030,6 @@
             this.textBoxPaysFournisseur.Name = "textBoxPaysFournisseur";
             this.textBoxPaysFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxPaysFournisseur.TabIndex = 70;
-            this.textBoxPaysFournisseur.TextChanged += new System.EventHandler(this.textBoxPaysFournisseur_TextChanged);
             // 
             // textBoxRegionFournisseur
             // 
@@ -1100,7 +1038,6 @@
             this.textBoxRegionFournisseur.Name = "textBoxRegionFournisseur";
             this.textBoxRegionFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxRegionFournisseur.TabIndex = 68;
-            this.textBoxRegionFournisseur.TextChanged += new System.EventHandler(this.textBoxRegionFournisseur_TextChanged);
             // 
             // textBoxVilleFournisseur
             // 
@@ -1109,7 +1046,6 @@
             this.textBoxVilleFournisseur.Name = "textBoxVilleFournisseur";
             this.textBoxVilleFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxVilleFournisseur.TabIndex = 66;
-            this.textBoxVilleFournisseur.TextChanged += new System.EventHandler(this.textBoxVilleFournisseur_TextChanged);
             // 
             // textBoxAdresseFournisseur
             // 
@@ -1118,7 +1054,6 @@
             this.textBoxAdresseFournisseur.Name = "textBoxAdresseFournisseur";
             this.textBoxAdresseFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxAdresseFournisseur.TabIndex = 65;
-            this.textBoxAdresseFournisseur.TextChanged += new System.EventHandler(this.textBoxAdresseFournisseur_TextChanged);
             // 
             // textBoxEmailFournisseur
             // 
@@ -1127,7 +1062,6 @@
             this.textBoxEmailFournisseur.Name = "textBoxEmailFournisseur";
             this.textBoxEmailFournisseur.Size = new System.Drawing.Size(203, 24);
             this.textBoxEmailFournisseur.TabIndex = 62;
-            this.textBoxEmailFournisseur.TextChanged += new System.EventHandler(this.textBoxEmailFournisseur_TextChanged);
             // 
             // textBoxFixeFournisseur
             // 
@@ -1136,7 +1070,6 @@
             this.textBoxFixeFournisseur.Name = "textBoxFixeFournisseur";
             this.textBoxFixeFournisseur.Size = new System.Drawing.Size(203, 24);
             this.textBoxFixeFournisseur.TabIndex = 60;
-            this.textBoxFixeFournisseur.TextChanged += new System.EventHandler(this.textBoxFixeFournisseur_TextChanged);
             // 
             // textBoxRueFournisseur
             // 
@@ -1145,7 +1078,6 @@
             this.textBoxRueFournisseur.Name = "textBoxRueFournisseur";
             this.textBoxRueFournisseur.Size = new System.Drawing.Size(254, 24);
             this.textBoxRueFournisseur.TabIndex = 57;
-            this.textBoxRueFournisseur.TextChanged += new System.EventHandler(this.textBoxRueFournisseur_TextChanged);
             // 
             // textBoxTelephoneFournisseur
             // 
@@ -1154,7 +1086,6 @@
             this.textBoxTelephoneFournisseur.Name = "textBoxTelephoneFournisseur";
             this.textBoxTelephoneFournisseur.Size = new System.Drawing.Size(203, 24);
             this.textBoxTelephoneFournisseur.TabIndex = 55;
-            this.textBoxTelephoneFournisseur.TextChanged += new System.EventHandler(this.textBoxTelephoneFournisseur_TextChanged);
             // 
             // textBoxNomFournisseur
             // 
@@ -1163,7 +1094,6 @@
             this.textBoxNomFournisseur.Name = "textBoxNomFournisseur";
             this.textBoxNomFournisseur.Size = new System.Drawing.Size(154, 24);
             this.textBoxNomFournisseur.TabIndex = 49;
-            this.textBoxNomFournisseur.TextChanged += new System.EventHandler(this.textBoxNomFournisseur_TextChanged);
             // 
             // lblReputationFournisseur
             // 
@@ -1175,7 +1105,6 @@
             this.lblReputationFournisseur.Size = new System.Drawing.Size(88, 20);
             this.lblReputationFournisseur.TabIndex = 71;
             this.lblReputationFournisseur.Text = "Réputation";
-            this.lblReputationFournisseur.Click += new System.EventHandler(this.lblReputationFournisseur_Click);
             // 
             // lblPaysFournisseur
             // 
@@ -1187,7 +1116,6 @@
             this.lblPaysFournisseur.Size = new System.Drawing.Size(43, 20);
             this.lblPaysFournisseur.TabIndex = 69;
             this.lblPaysFournisseur.Text = "Pays";
-            this.lblPaysFournisseur.Click += new System.EventHandler(this.lblPaysFournisseur_Click);
             // 
             // lblRegion
             // 
@@ -1199,7 +1127,6 @@
             this.lblRegion.Size = new System.Drawing.Size(60, 20);
             this.lblRegion.TabIndex = 67;
             this.lblRegion.Text = "Région";
-            this.lblRegion.Click += new System.EventHandler(this.lblRegion_Click);
             // 
             // lblVilleFournisseur
             // 
@@ -1211,7 +1138,6 @@
             this.lblVilleFournisseur.Size = new System.Drawing.Size(38, 20);
             this.lblVilleFournisseur.TabIndex = 64;
             this.lblVilleFournisseur.Text = "Ville";
-            this.lblVilleFournisseur.Click += new System.EventHandler(this.lblVilleFournisseur_Click);
             // 
             // lblEmailFournisseur
             // 
@@ -1223,7 +1149,6 @@
             this.lblEmailFournisseur.Size = new System.Drawing.Size(48, 20);
             this.lblEmailFournisseur.TabIndex = 63;
             this.lblEmailFournisseur.Text = "Email";
-            this.lblEmailFournisseur.Click += new System.EventHandler(this.lblEmailFournisseur_Click);
             // 
             // lblFixeFournisseur
             // 
@@ -1235,7 +1160,6 @@
             this.lblFixeFournisseur.Size = new System.Drawing.Size(38, 20);
             this.lblFixeFournisseur.TabIndex = 61;
             this.lblFixeFournisseur.Text = "Fixe";
-            this.lblFixeFournisseur.Click += new System.EventHandler(this.lblFixeFournisseur_Click);
             // 
             // lblAdresseFournisseur
             // 
@@ -1247,7 +1171,6 @@
             this.lblAdresseFournisseur.Size = new System.Drawing.Size(68, 20);
             this.lblAdresseFournisseur.TabIndex = 59;
             this.lblAdresseFournisseur.Text = "Adresse";
-            this.lblAdresseFournisseur.Click += new System.EventHandler(this.lblAdresseFournisseur_Click);
             // 
             // lblRueFournisseur
             // 
@@ -1259,7 +1182,6 @@
             this.lblRueFournisseur.Size = new System.Drawing.Size(39, 20);
             this.lblRueFournisseur.TabIndex = 58;
             this.lblRueFournisseur.Text = "Rue";
-            this.lblRueFournisseur.Click += new System.EventHandler(this.lblRueFournisseur_Click);
             // 
             // lblTelephoneFournisseur
             // 
@@ -1271,7 +1193,6 @@
             this.lblTelephoneFournisseur.Size = new System.Drawing.Size(84, 20);
             this.lblTelephoneFournisseur.TabIndex = 56;
             this.lblTelephoneFournisseur.Text = "Téléphone";
-            this.lblTelephoneFournisseur.Click += new System.EventHandler(this.lblTelephoneFournisseur_Click);
             // 
             // lblNomFournisseur
             // 
@@ -1283,7 +1204,6 @@
             this.lblNomFournisseur.Size = new System.Drawing.Size(130, 20);
             this.lblNomFournisseur.TabIndex = 50;
             this.lblNomFournisseur.Text = "Nom Fournisseur";
-            this.lblNomFournisseur.Click += new System.EventHandler(this.lblNomFournisseur_Click);
             // 
             // lblFournisseur
             // 
@@ -1295,7 +1215,6 @@
             this.lblFournisseur.Size = new System.Drawing.Size(137, 25);
             this.lblFournisseur.TabIndex = 48;
             this.lblFournisseur.Text = "Fournisseurs";
-            this.lblFournisseur.Click += new System.EventHandler(this.lblFournisseur_Click);
             // 
             // dataGridViewFournisseur
             // 
@@ -1346,7 +1265,6 @@
             this.dataGridViewFournisseur.Size = new System.Drawing.Size(750, 169);
             this.dataGridViewFournisseur.TabIndex = 45;
             this.dataGridViewFournisseur.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFournisseur_CellClick);
-            this.dataGridViewFournisseur.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFournisseur_CellContentClick);
             // 
             // FormUtilisateur
             // 
