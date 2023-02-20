@@ -20,6 +20,7 @@ namespace appNegoSudWinForms.Forms
         string urlInventaire = "http://195.154.113.18:8000/api/Inventaires/";
         string urlProduit = "http://195.154.113.18:8000/api/Produits/";
         string urlMagasin = "http://195.154.113.18:8000/api/Magasins/";
+        string urlCatalogue = "http://195.154.113.18:8000/api/Catalogues/";
         string token = Properties.Settings.Default.token;
 
 
@@ -38,6 +39,7 @@ namespace appNegoSudWinForms.Forms
                     HttpResponseMessage responseInventaire = await client.GetAsync(urlInventaire);
                     HttpResponseMessage responseProduit = await client.GetAsync(urlProduit);
                     HttpResponseMessage responseMagasin = await client.GetAsync(urlMagasin);
+                    HttpResponseMessage responseCatalogue = await client.GetAsync(urlCatalogue);
 
                     if (responseInventaire.IsSuccessStatusCode)
                     {
@@ -56,7 +58,6 @@ namespace appNegoSudWinForms.Forms
                         List<Produit?> produits = JsonConvert.DeserializeObject<List<Produit?>>(result1);
                         dataGridViewProduit.DataSource = produits;
                     }
-                  
                     else
                     {
                         Console.WriteLine("Echec de la requête : " + responseProduit.StatusCode);
@@ -68,10 +69,20 @@ namespace appNegoSudWinForms.Forms
                         List<Magasin?> magasins = JsonConvert.DeserializeObject<List<Magasin?>>(result2);
                         dataGridViewMagasin.DataSource = magasins;
                     }
-                  
                     else
                     {
                         Console.WriteLine("Echec de la requête : " + responseMagasin.StatusCode);
+                    }
+
+                    if (responseCatalogue.IsSuccessStatusCode)
+                    {
+                        string result3 = await responseCatalogue.Content.ReadAsStringAsync();
+                        List<Catalogue?> catalogues = JsonConvert.DeserializeObject<List<Catalogue?>>(result3);
+                        dataGridViewCatalogue.DataSource = catalogues;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Echec de la requête : " + responseCatalogue.StatusCode);
                     }
                 }
             }
@@ -754,5 +765,157 @@ namespace appNegoSudWinForms.Forms
                 }
             }
         }
+
+        private void dataGridViewCatalogue_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            if (rowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewCatalogue.Rows[rowIndex];
+                selectedId = row.Cells[0].Value.ToString();
+
+                textBoxReferenceCatalogue.Text = row.Cells[1].Value.ToString();
+                selectedName = textBoxReferenceCatalogue.Text;
+                textBoxImageCatalogue.Text = row.Cells[2].Value.ToString();
+                textBoxProduitIdCatalogue.Text = row.Cells[3].Value.ToString();
+
+                //  selectedName = textBoxNomCategorie.Text;
+                // MessageBox.Show("L'ID de la catégorie sélectionnée est : " + selectedId);
+            }
+            else { }
+        }
+
+        private async void btnAddCatalogue_Click(object sender, EventArgs e)
+        {
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<string, string>
+                        {
+                            { "reference", textBoxReferenceCatalogue.Text },
+                            { "image", textBoxImageCatalogue.Text },
+                            { "produitId", textBoxProduitIdCatalogue.Text },
+                        };
+
+                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.PostAsync(urlCatalogue, content);
+
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string result = await response.Content.ReadAsStringAsync();
+                        Catalogue catalogue = JsonConvert.DeserializeObject<Catalogue>(result);
+
+                        string[] row = new string[] { catalogue.Reference, catalogue.Image };
+
+                        MessageBox.Show("Le catalogue '" + textBoxReferenceCatalogue.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxReferenceCatalogue.Clear();
+                        textBoxImageCatalogue.Clear();
+                        textBoxProduitIdCatalogue.Clear();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Echec de la requête : " + response.StatusCode);
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnEditCatalogue_Click(object sender, EventArgs e)
+        {
+            string urlEdit = urlCatalogue + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<string, dynamic>
+                    {
+                        { "id", selectedId },
+                        { "reference", textBoxReferenceCatalogue.Text },
+                        { "image", textBoxImageCatalogue.Text },
+                        { "produitId", textBoxProduitIdCatalogue.Text },
+                    };
+
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+
+
+                    HttpResponseMessage response = await client.PutAsync(urlEdit, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le catalogue '" + selectedName + "' a été modifié en '" + textBoxReferenceCatalogue.Text + "' avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxReferenceCatalogue.Clear();
+                        textBoxImageCatalogue.Clear();
+                        textBoxProduitIdCatalogue.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la modification de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnDeleteCatalogue_Click(object sender, EventArgs e)
+        {
+            // Construction de l'URL pour la requête DELETE
+            string urlDelete = urlCatalogue + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.DeleteAsync(urlDelete);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le catalogue avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+
+                        FormInventaire_Load(sender, e);
+
+                        textBoxReferenceCatalogue.Clear();
+                        textBoxImageCatalogue.Clear();
+                        textBoxProduitIdCatalogue.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la suppression de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
     }
 }
