@@ -72,28 +72,25 @@ namespace appNegoSudWinForms.Forms
         {
             using (var client = new HttpClient())
             {
-
                 try
                 {
-
                     var values = new Dictionary<string, string>
-                        {
-                            { "nameCategorie", textBoxNomCategorie.Text },
-                        };
+            {
+                { "nameCategorie", textBoxNomCategorie.Text },
+            };
 
                     var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(url, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
                         string result = await response.Content.ReadAsStringAsync();
-                        Categorie categorie = JsonConvert.DeserializeObject<Categorie>(result);
+                        List<Categorie> categories = JsonConvert.DeserializeObject<List<Categorie>>(result);
 
-                        string[] row = new string[] { categorie.NameCategorie };
+                        string[] row = categories.Select(c => c.NameCategorie).ToArray();
 
-                        MessageBox.Show("La catégorie '" + textBoxNomCategorie.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("La catégorie a été ajouté avec succès !", "NeoSud - Confirmation");
                         FormCategorie_Load(sender, e);
                         textBoxNomCategorie.Clear();
                     }
@@ -102,7 +99,6 @@ namespace appNegoSudWinForms.Forms
                         Console.WriteLine("Echec de la requête : " + response.StatusCode);
                     }
                 }
-
                 catch (Exception ex)
                 {
                     Console.WriteLine("Erreur : " + ex.Message);
@@ -110,9 +106,9 @@ namespace appNegoSudWinForms.Forms
             }
         }
 
+
         private async void btnEdit_Click(object sender, EventArgs e)
         {
-
             string urlEdit = url + selectedId;
 
             using (var client = new HttpClient())
@@ -138,7 +134,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("La catégorie '" + selectedName + "' a été modifié en '" + textBoxNomCategorie.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("La catégorie a été modifié avec succès !", "NeoSud - Confirmation");
                         FormCategorie_Load(sender, e);
                         textBoxNomCategorie.Clear();
                     }
@@ -171,7 +167,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("La catégorie avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("La catégorie a été supprimé avec succès !", "NeoSud - Confirmation");
                         FormCategorie_Load(sender, e);
                         textBoxNomCategorie.Clear();
                     }
