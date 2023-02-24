@@ -148,7 +148,7 @@ namespace appNegoSudWinForms.Forms
 
                         string[] row = new string[] { inventaire.Nom, inventaire.Appelation, inventaire.Couleur, inventaire.Classement, inventaire.Millesime, inventaire.Position };
 
-                        MessageBox.Show("L'inventaire '" + textBoxNomInventaire.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("L'inventaire a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -208,7 +208,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("L'inventaire '" + selectedName + "' a été modifié en '" + textBoxNomInventaire.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("L'inventaire a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -248,7 +248,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("L'inventaire avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("L'inventaire a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -402,7 +402,7 @@ namespace appNegoSudWinForms.Forms
 
                         string[] row = new string[] { produit.SKU, produit.NomProduit, produit.Resumee, produit.Description, produit.Ancien, produit.Region, produit.Couleur, produit.Raisins, produit.Aliments, produit.Conservation, produit.Expiration };
 
-                        MessageBox.Show("Le produit '" + textBoxNomProduitProduit.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le produit a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -460,7 +460,7 @@ namespace appNegoSudWinForms.Forms
                         { "prix_carton", textBoxPrixCartonProduit.Text },
                         { "tVA", textBoxTvaProduit.Text },
                         { "remise", textBoxRemiseProduit.Text },
-                        //{ "imagePrincipal", textBoxmagasinIdInventaire.Text },
+                        { "imagePrincipal", textBoxmagasinIdInventaire.Text },
                         { "ancien", textBoxAncienProduit.Text },
                         { "region", textBoxRegionProduit.Text },
                         { "couleur", textBoxCouleurProduit.Text },
@@ -485,7 +485,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le produit '" + selectedName + "' a été modifié en '" + textBoxNomProduitProduit.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le produit a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -536,7 +536,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le produit avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le produit a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -633,7 +633,7 @@ namespace appNegoSudWinForms.Forms
 
                         string[] row = new string[] { magasin.NomMagasin, magasin.Email, magasin.Tel, magasin.Fix, magasin.Adresse, magasin.Rue, magasin.CodePostal, magasin.Region, magasin.Pays };
 
-                        MessageBox.Show("Le magasin '" + textBoxNomMagasin.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le magasin a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -697,7 +697,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le magasin '" + selectedName + "' a été modifié en '" + textBoxNomMagasin.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le magasin a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -739,7 +739,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le magasin avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le magasin a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -812,7 +812,7 @@ namespace appNegoSudWinForms.Forms
 
                         string[] row = new string[] { catalogue.Reference, catalogue.Image };
 
-                        MessageBox.Show("Le catalogue '" + textBoxReferenceCatalogue.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le catalogue a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -862,7 +862,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le catalogue '" + selectedName + "' a été modifié en '" + textBoxReferenceCatalogue.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le catalogue a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 
@@ -897,7 +897,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le catalogue avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le catalogue a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
 

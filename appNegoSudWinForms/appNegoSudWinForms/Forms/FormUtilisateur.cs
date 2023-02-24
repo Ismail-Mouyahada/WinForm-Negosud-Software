@@ -185,7 +185,7 @@ namespace appNegoSudWinForms.Forms
 
                         string[] row = new string[] { producteur.NomProducteur, producteur.RaisonSocial, producteur.Nom, producteur.Prenom, producteur.Tel, producteur.Fix, producteur.Email, producteur.Rue, producteur.Adresse, producteur.Ville, producteur.Region, producteur.Reputation };
 
-                        MessageBox.Show("Le producteur '" + textBoxNomProducteurProducer.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le producteur a été ajouté avec succès !", "NeoSud - Confirmation");
                        
                         FormUtilisateur_Load(sender, e);
                        
@@ -257,7 +257,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le producteur '" + selectedName + "' a été modifié en '" + textBoxNomProducteurProducer.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le producteur a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
 
@@ -304,7 +304,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le producteur avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le producteur a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
 
@@ -393,7 +393,7 @@ namespace appNegoSudWinForms.Forms
                         Fournisseur fournisseur = JsonConvert.DeserializeObject<Fournisseur>(result);
                         string[] row = new string[] { fournisseur.NomFournisseur, fournisseur.Tel, fournisseur.Fix, fournisseur.Email, fournisseur.Rue, fournisseur.Adresse, fournisseur.Ville, fournisseur.Region, fournisseur.Reputation };
 
-                        MessageBox.Show("Le fournisseur '" + textBoxNomFournisseur.Text + "' a été ajouté avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le fournisseur a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
 
@@ -458,7 +458,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le fournisseur '" + selectedName + "' a été modifié en '" + textBoxNomFournisseur.Text + "' avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le fournisseur a été modifié avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
 
@@ -501,7 +501,7 @@ namespace appNegoSudWinForms.Forms
 
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageBox.Show("Le fournisseur avec l'identifiant '" + selectedId + "' a été supprimé avec succès !", "NeoSud - Confirmation");
+                        MessageBox.Show("Le fournisseur a été supprimé avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
 
