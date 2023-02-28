@@ -46,6 +46,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageCommande = new System.Windows.Forms.TabPage();
+            this.textBoxUtilisateurIdCommande = new System.Windows.Forms.TextBox();
+            this.labelUtilisateurIdCommande = new System.Windows.Forms.Label();
             this.textBoxRemiseCatalogue = new System.Windows.Forms.TextBox();
             this.textBoxStatutCatalogue = new System.Windows.Forms.TextBox();
             this.lblRemiseCatalogue = new System.Windows.Forms.Label();
@@ -126,6 +128,8 @@
             // tabPageCommande
             // 
             this.tabPageCommande.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.tabPageCommande.Controls.Add(this.textBoxUtilisateurIdCommande);
+            this.tabPageCommande.Controls.Add(this.labelUtilisateurIdCommande);
             this.tabPageCommande.Controls.Add(this.textBoxRemiseCatalogue);
             this.tabPageCommande.Controls.Add(this.textBoxStatutCatalogue);
             this.tabPageCommande.Controls.Add(this.lblRemiseCatalogue);
@@ -141,6 +145,25 @@
             this.tabPageCommande.Size = new System.Drawing.Size(792, 422);
             this.tabPageCommande.TabIndex = 0;
             this.tabPageCommande.Text = "Commandes";
+            // 
+            // textBoxUtilisateurIdCommande
+            // 
+            this.textBoxUtilisateurIdCommande.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUtilisateurIdCommande.Location = new System.Drawing.Point(128, 152);
+            this.textBoxUtilisateurIdCommande.Name = "textBoxUtilisateurIdCommande";
+            this.textBoxUtilisateurIdCommande.Size = new System.Drawing.Size(125, 24);
+            this.textBoxUtilisateurIdCommande.TabIndex = 14;
+            // 
+            // labelUtilisateurIdCommande
+            // 
+            this.labelUtilisateurIdCommande.AutoSize = true;
+            this.labelUtilisateurIdCommande.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelUtilisateurIdCommande.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelUtilisateurIdCommande.Location = new System.Drawing.Point(28, 154);
+            this.labelUtilisateurIdCommande.Name = "labelUtilisateurIdCommande";
+            this.labelUtilisateurIdCommande.Size = new System.Drawing.Size(94, 20);
+            this.labelUtilisateurIdCommande.TabIndex = 15;
+            this.labelUtilisateurIdCommande.Text = "UtilisateurId";
             // 
             // textBoxRemiseCatalogue
             // 
@@ -943,7 +966,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl);
             this.Name = "FormCommande";
-            this.Text = "FormCommande";
+            this.Text = "Commandes";
             this.Load += new System.EventHandler(this.FormCommande_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPageCommande.ResumeLayout(false);
@@ -1017,5 +1040,7 @@
         private Button btnEditElemFacture;
         private Button btnDeleteElemFacture;
         private Button btnAddElemFacture;
+        private TextBox textBoxUtilisateurIdCommande;
+        private Label labelUtilisateurIdCommande;
     }
 }

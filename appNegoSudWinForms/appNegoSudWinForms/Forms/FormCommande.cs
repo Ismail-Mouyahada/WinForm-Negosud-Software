@@ -113,6 +113,7 @@ namespace appNegoSudWinForms.Forms
                 {
                     // La conversion a échoué, gérez l'erreur selon vos besoins
                 }
+                textBoxUtilisateurIdCommande.Text = row.Cells[5].Value.ToString();
             }
             else { }
         }
@@ -125,23 +126,22 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "statut", textBoxStatutCatalogue.Text },
-                            { "remise", textBoxRemiseCatalogue.Text },
+                            { "remise", float.Parse(textBoxRemiseCatalogue.Text) },
+                            { "DateCommande", DateTime.Now },
+                            { "DateModification", DateTime.Now },
+                            { "utilisateurId", textBoxUtilisateurIdCommande.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlCommande, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Commande commande = JsonConvert.DeserializeObject<Commande>(result);
-
-                        string[] row = new string[] { commande.Statut };
 
                         MessageBox.Show("La commande a été ajouté avec succès !", "NeoSud - Confirmation");
 
@@ -149,6 +149,7 @@ namespace appNegoSudWinForms.Forms
 
                         textBoxStatutCatalogue.Clear();
                         textBoxRemiseCatalogue.Clear();
+                        textBoxUtilisateurIdCommande.Clear();
                     }
                     else
                     {
@@ -173,20 +174,20 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "statut", textBoxStatutCatalogue.Text },
-                        { "remise", textBoxRemiseCatalogue.Text },
+                        { "remise", float.Parse(textBoxRemiseCatalogue.Text) },
+                    //   { "DateCommande", DateTime.Now },
+                        { "DateModification", DateTime.Now },
+                        { "utilisateurId", textBoxUtilisateurIdCommande.Text },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)
@@ -197,6 +198,7 @@ namespace appNegoSudWinForms.Forms
 
                         textBoxStatutCatalogue.Clear();
                         textBoxRemiseCatalogue.Clear();
+                        textBoxUtilisateurIdCommande.Clear();
                     }
                     else
                     {
@@ -278,27 +280,26 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "quantiteCommande", textBoxQuantiteElemCommande.Text },
                             { "seuilAlerte", textBoxSeuilAlerteElemCommande.Text },
                             { "alerte", textBoxAlerteElemCommande.Text },
-                            { "totalCommande", textBoxTotalElemCommande.Text },
+                            { "totalCommande", float.Parse(textBoxTotalElemCommande.Text) },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "commandeId", textBoxCommandeIdElemCommande.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlElemCommande, content);
 
 
+
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        ElemCommande elemcommande = JsonConvert.DeserializeObject<ElemCommande>(result);
-
-                        string[] row = new string[] { elemcommande.Alerte };
-
                         MessageBox.Show("L'Element Commande a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormCommande_Load(sender, e);
@@ -332,23 +333,22 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "quantiteCommande", textBoxQuantiteElemCommande.Text },
                         { "seuilAlerte", textBoxSeuilAlerteElemCommande.Text },
                         { "alerte", textBoxAlerteElemCommande.Text },
-                        { "totalCommande", textBoxTotalElemCommande.Text },
+                        { "totalCommande", float.Parse(textBoxTotalElemCommande.Text) },
+                    //  { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "commandeId", textBoxCommandeIdElemCommande.Text },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)
@@ -440,25 +440,22 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "reference", textBoxReferenceFacture.Text },
-                            { "factureTotal", textBoxFatureTotalFacture.Text },
+                            { "factureTotal", float.Parse(textBoxFatureTotalFacture.Text) },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "commandeId", textBoxCommandeIdFacture.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlFacture, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Facture facture = JsonConvert.DeserializeObject<Facture>(result);
-
-                        string[] row = new string[] { facture.Reference };
-
                         MessageBox.Show("La Facture a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormCommande_Load(sender, e);
@@ -490,21 +487,20 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "reference", textBoxReferenceFacture.Text },
-                        { "factureTotal", textBoxFatureTotalFacture.Text },
+                        { "factureTotal", float.Parse(textBoxFatureTotalFacture.Text) },
+                    //    { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "commandeId", textBoxCommandeIdFacture.Text },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)
@@ -585,23 +581,22 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "factureId", textBoxProduitIdCatalogue.Text },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlElemFacture, content);
 
 
+
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        ElemFacture elemfacture = JsonConvert.DeserializeObject<ElemFacture>(result);
-
-                        string[] row = new string[] { };
-
                         MessageBox.Show("L'Element Facture a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormCommande_Load(sender, e);
@@ -631,19 +626,18 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "factureId", textBoxProduitIdCatalogue.Text },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)

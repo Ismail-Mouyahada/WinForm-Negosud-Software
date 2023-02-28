@@ -17,9 +17,9 @@ namespace appNegoSudWinForms.Models
         public DateTime DateModification { get; set; }
 
         public int? CommandeId { get; set; }
-        public Commande? Commande { get; set; }
+      //  public Commande? Commande { get; set; }
 
-        public ICollection<Produit>? Produits { get; set; }
+       // public ICollection<Produit>? Produits { get; set; }
 
         public ElemCommande(int id, int? quantiteCommande, int? seuilAlerte, string? alerte, float totalCommande, DateTime dateCreation, DateTime dateModification, int? commandeId, Commande? commande, ICollection<Produit>? produits)
         {
@@ -31,8 +31,8 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             CommandeId = commandeId;
-            Commande = commande;
-            Produits = produits;
+          //  Commande = commande;
+          //  Produits = produits;
         }
     }
 }

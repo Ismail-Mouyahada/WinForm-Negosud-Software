@@ -14,9 +14,9 @@ namespace appNegoSudWinForms.Models
         public DateTime DateModification { get; set; }
 
         public int? FactureId { get; set; }
-        public Facture? Facture { get; set; }
+    //    public Facture? Facture { get; set; }
 
-        public ICollection<Produit>? Produits { get; set; }
+  //      public ICollection<Produit>? Produits { get; set; }
 
         public ElemFacture(int id, DateTime dateCreation, DateTime dateModification, int? factureId, Facture? facture, ICollection<Produit>? produits)
         {
@@ -24,8 +24,8 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             FactureId = factureId;
-            Facture = facture;
-            Produits = produits;
+    //        Facture = facture;
+     //       Produits = produits;
         }
     }
 }

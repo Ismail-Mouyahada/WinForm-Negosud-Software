@@ -26,7 +26,7 @@ namespace appNegoSudWinForms.Models
         public DateTime DateModification { get; set; }
 
         public int? FournisseurId { get; set; }
-        public Fournisseur? Fournisseur { get; set; }
+  //      public Fournisseur? Fournisseur { get; set; }
 
         public Producteur(int id, string? nomProducteur, string? raisonSocial, string? nom, string? prenom, string? tel, string? fix, string? email, string? rue, string? adresse, string? ville, string? region, string? pays, string? reputation, DateTime dateCreation, DateTime dateModification, int? fournisseurId, Fournisseur? fournisseur)
         {
@@ -47,7 +47,7 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             FournisseurId = fournisseurId;
-            Fournisseur = fournisseur;
+    //        Fournisseur = fournisseur;
         }
     }
 }

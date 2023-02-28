@@ -22,7 +22,7 @@ namespace appNegoSudWinForms.Models
         public DateTime DateCreation { get; set; }
         public DateTime DateModification { get; set; }
 
-        public ICollection<Produit>? Produits { get; set; }
+ //       public ICollection<Produit>? Produits { get; set; }
 
         public Fournisseur(int id, string? nomFournisseur, string? tel, string? fix, string? email, string? rue, string? adresse, string? ville, string? region, string? pays, string? reputation, DateTime dateCreation, DateTime dateModification, ICollection<Produit>? produits)
         {
@@ -39,7 +39,7 @@ namespace appNegoSudWinForms.Models
             Reputation = reputation;
             DateCreation = dateCreation;
             DateModification = dateModification;
-            Produits = produits;
+    //        Produits = produits;
         }
     }
 }

@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace appNegoSudWinForms.Forms
 {
-    public partial class FormCategorie : Form
+    public partial class Catégories : Form
     {
         private string selectedId; // Variable qui selectionne ID pour pouvoir etre Modifier / Supprimer
         private string selectedName; // Variable qui selectionne ID pour pouvoir etre Modifier
@@ -23,7 +23,7 @@ namespace appNegoSudWinForms.Forms
         string url = "http://195.154.113.18:8000/api/Categories/";
        // string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJqdGkiOiI2OTU4NDkzZC1kNTkxLTQyYjctYTdhOS0xZDQzMDBiMDNlZDUiLCJleHAiOjE2NzU3NTQ3NzgsImlzcyI6Imh0dHBzOlxcbG9jYWxob3N0LmNvbSIsImF1ZCI6Imh0dHBzOlxcbG9jYWxob3N0LmNvbSJ9.oyJWt5xpve1431cxZdI9gD9wx7gzC6uw0q6jgRMLyZM";
         string token = Properties.Settings.Default.token;
-        public FormCategorie()
+        public Catégories()
         {
             InitializeComponent();
         }

@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButtonAlerteForm = new FontAwesome.Sharp.IconButton();
             this.btnInformation = new FontAwesome.Sharp.IconButton();
             this.btnUtilisateur = new FontAwesome.Sharp.IconButton();
             this.btnCategorie = new FontAwesome.Sharp.IconButton();
@@ -44,16 +47,23 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.labelHomeHeure = new System.Windows.Forms.Label();
+            this.labelHomeDate = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.iconButtonAlerteForm);
             this.panelMenu.Controls.Add(this.btnInformation);
             this.panelMenu.Controls.Add(this.btnUtilisateur);
             this.panelMenu.Controls.Add(this.btnCategorie);
@@ -65,6 +75,28 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 656);
             this.panelMenu.TabIndex = 0;
+            // 
+            // iconButtonAlerteForm
+            // 
+            this.iconButtonAlerteForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonAlerteForm.FlatAppearance.BorderSize = 0;
+            this.iconButtonAlerteForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAlerteForm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonAlerteForm.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.iconButtonAlerteForm.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonAlerteForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAlerteForm.IconSize = 32;
+            this.iconButtonAlerteForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonAlerteForm.Location = new System.Drawing.Point(0, 440);
+            this.iconButtonAlerteForm.Name = "iconButtonAlerteForm";
+            this.iconButtonAlerteForm.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButtonAlerteForm.Size = new System.Drawing.Size(220, 60);
+            this.iconButtonAlerteForm.TabIndex = 7;
+            this.iconButtonAlerteForm.Text = "Alerte Produit";
+            this.iconButtonAlerteForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonAlerteForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonAlerteForm.UseVisualStyleBackColor = true;
+            this.iconButtonAlerteForm.Click += new System.EventHandler(this.iconButtonAlerteForm_Click);
             // 
             // btnInformation
             // 
@@ -265,9 +297,9 @@
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitleChildForm.Location = new System.Drawing.Point(59, 34);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(35, 13);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(42, 13);
             this.lblTitleChildForm.TabIndex = 1;
-            this.lblTitleChildForm.Text = "Home";
+            this.lblTitleChildForm.Text = "Accueil";
             // 
             // iconCurrentChildForm
             // 
@@ -295,12 +327,55 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.labelHomeHeure);
+            this.panelDesktop.Controls.Add(this.labelHomeDate);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelDesktop.Location = new System.Drawing.Point(220, 84);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(984, 572);
             this.panelDesktop.TabIndex = 3;
+            // 
+            // labelHomeHeure
+            // 
+            this.labelHomeHeure.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelHomeHeure.AutoSize = true;
+            this.labelHomeHeure.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelHomeHeure.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelHomeHeure.Location = new System.Drawing.Point(299, 425);
+            this.labelHomeHeure.Name = "labelHomeHeure";
+            this.labelHomeHeure.Size = new System.Drawing.Size(197, 73);
+            this.labelHomeHeure.TabIndex = 5;
+            this.labelHomeHeure.Text = "heure";
+            // 
+            // labelHomeDate
+            // 
+            this.labelHomeDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelHomeDate.AutoSize = true;
+            this.labelHomeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelHomeDate.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelHomeDate.Location = new System.Drawing.Point(259, 323);
+            this.labelHomeDate.Name = "labelHomeDate";
+            this.labelHomeDate.Size = new System.Drawing.Size(158, 73);
+            this.labelHomeDate.TabIndex = 4;
+            this.labelHomeDate.Text = "date";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(59, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(794, 337);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMainMenu
             // 
@@ -322,6 +397,9 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +422,10 @@
         private Button btnMinimize;
         private Button btnMaximize;
         private Button btnClose;
+        private Label labelHomeDate;
+        private Label labelHomeHeure;
+        private System.Windows.Forms.Timer timer1;
+        private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton iconButtonAlerteForm;
     }
 }
