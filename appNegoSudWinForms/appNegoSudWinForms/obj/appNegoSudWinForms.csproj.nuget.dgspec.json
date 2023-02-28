@@ -45,6 +45,10 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "Autoupdater.NET.Official": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[6.2.1, )"

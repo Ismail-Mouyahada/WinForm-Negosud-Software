@@ -15,7 +15,7 @@ namespace appNegoSudWinForms.Models
 
         // Forgein Keys
         public int? ProduitId { get; set; }
-        public Produit? Produit { get; set; }
+       // public Produit? Produit { get; set; }
 
         public Catalogue(int id, string? reference, string? image, int? produitId, Produit? produit)
         {
@@ -23,7 +23,7 @@ namespace appNegoSudWinForms.Models
             Reference = reference;
             Image = image;
             ProduitId = produitId;
-            Produit = produit;
+         //   Produit = produit;
         }
     }
 }

@@ -57,4 +57,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelInformationApplication.Text" xml:space="preserve">
+    <value>Nom de l'application : NegoSud
+Version : 1.0
+Description :
+    NegoSud est une application faite en WindowsForm, elle permet d'être utilser par des administrateurs. 
+
+Informations de contact :
+    Pour toute question, suggestion ou problème, veuillez nous contacter à support@di-21.com ou au 01 23 45 67 89.
+
+Aide et support :
+   Consultez notre FAQ en ligne pour obtenir des réponses aux questions les plus fréquemment posées. 
+   Vous pouvez également consulter notre blog pour des conseils et astuces supplémentaires.
+
+Configuration système requise :
+   - Windows 10 ou version ultérieure
+   - Framework .NET 7.0.102 ou supérieur
+   - 2 Go de RAM
+
+Politique de confidentialité :
+   Nous prenons très au sérieux la confidentialité de vos données. 
+   Nous ne collectons pas et ne partageons pas vos informations personnelles avec des tiers sans votre consentement.
+
+Remerciements :
+   Nous tenons à remercier notre équipe de développement pour son travail acharné et tous les utilisateurs qui ont contribué à 
+   l'amélioration de l'application.
+</value>
+  </data>
 </root>

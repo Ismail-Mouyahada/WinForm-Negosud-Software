@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appNegoSudWinForms", "appNegoSudWinForms\appNegoSudWinForms.csproj", "{DAEC94F8-7103-4A43-BCAE-68850E672211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "appNegoSudWinForms", "appNegoSudWinForms\appNegoSudWinForms.csproj", "{DAEC94F8-7103-4A43-BCAE-68850E672211}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupNegoSud", "SetupNegoSud\SetupNegoSud.vdproj", "{B430B92B-72E7-41E2-A957-BFBF7122ED25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{DAEC94F8-7103-4A43-BCAE-68850E672211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEC94F8-7103-4A43-BCAE-68850E672211}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEC94F8-7103-4A43-BCAE-68850E672211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B430B92B-72E7-41E2-A957-BFBF7122ED25}.Debug|Any CPU.ActiveCfg = Debug
+		{B430B92B-72E7-41E2-A957-BFBF7122ED25}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

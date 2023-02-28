@@ -119,6 +119,172 @@ namespace appNegoSudWinForms.Forms
             else { }
         }
 
+        private async void btnAddUser_Click(object sender, EventArgs e)
+        {
+
+            bool isBusiness = checkBoxIsBusinessUser.Checked;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<dynamic, dynamic>
+                        {
+                            { "nomUtilisateur", textBoxNomUtilisateurUser.Text },
+                            { "nom", textBoxNomUser.Text },
+                            { "prenom", textBoxPrenomUser.Text },
+                            { "email", textBoxEmailUser.Text },
+                            { "tel", textBoxTelephoneUser.Text },
+                            { "motDePasse", textBoxMotDePasseUser.Text },
+                            { "role", comboBoxRoleUser.Text },
+                            { "isBusiness", isBusiness },
+                            { "sIREN", textBoxSirenUser.Text },
+                            { "DateInscription", DateTime.Now },
+                            { "DateModification", DateTime.Now },
+                        };
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.PostAsync(urlUtilisateur, content);
+
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le producteur a été ajouté avec succès !", "NeoSud - Confirmation");
+
+                        FormUtilisateur_Load(sender, e);
+
+                        textBoxNomUtilisateurUser.Clear();
+                        textBoxNomUser.Clear();
+                        textBoxPrenomUser.Clear();
+                        textBoxEmailUser.Clear();
+                        textBoxTelephoneUser.Clear();
+                        textBoxMotDePasseUser.Clear();
+                        comboBoxRoleUser.Text = "";
+                        checkBoxIsBusinessUser.Checked = false;
+                        textBoxSirenUser.Clear();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Echec de la requête : " + response.StatusCode);
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnEditUser_Click(object sender, EventArgs e)
+        {
+
+            bool isBusiness = checkBoxIsBusinessUser.Checked;
+            string urlEdit = urlUtilisateur + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    var values = new Dictionary<string, dynamic>
+                    {
+                        { "id", selectedId },
+                          { "nomUtilisateur", textBoxNomUtilisateurUser.Text },
+                            { "nom", textBoxNomUser.Text },
+                            { "prenom", textBoxPrenomUser.Text },
+                            { "email", textBoxEmailUser.Text },
+                            { "tel", textBoxTelephoneUser.Text },
+                            { "motDePasse", textBoxMotDePasseUser.Text },
+                            { "role", comboBoxRoleUser.Text },
+                            { "isBusiness", isBusiness },
+                            { "sIREN", textBoxSirenUser.Text },
+                           // { "DateInscription", DateTime.Now },
+                            { "DateModification", DateTime.Now },
+                    };
+
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.PutAsync(urlEdit, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le producteur a été modifié avec succès !", "NeoSud - Confirmation");
+
+                        FormUtilisateur_Load(sender, e);
+
+                        textBoxNomUtilisateurUser.Clear();
+                        textBoxNomUser.Clear();
+                        textBoxPrenomUser.Clear();
+                        textBoxEmailUser.Clear();
+                        textBoxTelephoneUser.Clear();
+                        textBoxMotDePasseUser.Clear();
+                        comboBoxRoleUser.Text = "";
+                        checkBoxIsBusinessUser.Checked = false;
+                        textBoxSirenUser.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la modification de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+        private async void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            // Construction de l'URL pour la requête DELETE
+            string urlDelete = urlUtilisateur + selectedId;
+
+            using (var client = new HttpClient())
+            {
+
+                try
+                {
+
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    HttpResponseMessage response = await client.DeleteAsync(urlDelete);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Le producteur a été supprimé avec succès !", "NeoSud - Confirmation");
+
+                        FormUtilisateur_Load(sender, e);
+
+                        textBoxNomUtilisateurUser.Clear();
+                        textBoxNomUser.Clear();
+                        textBoxPrenomUser.Clear();
+                        textBoxEmailUser.Clear();
+                        textBoxTelephoneUser.Clear();
+                        textBoxMotDePasseUser.Clear();
+                        comboBoxRoleUser.Text = "";
+                        checkBoxIsBusinessUser.Checked = false;
+                        textBoxSirenUser.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Une erreur s'est produite lors de la suppression de l'élément");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erreur : " + ex.Message);
+                }
+            }
+        }
+
+
         private void dataGridViewProducteur_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -155,7 +321,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "nomProducteur", textBoxNomProducteurProducer.Text },
                             { "raisonSocial", textBoxRaisonSocialProducer.Text },
@@ -170,21 +336,19 @@ namespace appNegoSudWinForms.Forms
                             { "region", textBoxRegionProducer.Text },
                             { "pays", textBoxPaysProducer.Text },
                             { "reputation", textBoxReputationProducer.Text },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "fournisseurId", comboBoxFournisseurProducer.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlProducteur, content);
 
 
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Producteur producteur = JsonConvert.DeserializeObject<Producteur>(result);
-
-                        string[] row = new string[] { producteur.NomProducteur, producteur.RaisonSocial, producteur.Nom, producteur.Prenom, producteur.Tel, producteur.Fix, producteur.Email, producteur.Rue, producteur.Adresse, producteur.Ville, producteur.Region, producteur.Reputation };
-
                         MessageBox.Show("Le producteur a été ajouté avec succès !", "NeoSud - Confirmation");
                        
                         FormUtilisateur_Load(sender, e);
@@ -243,16 +407,15 @@ namespace appNegoSudWinForms.Forms
                         { "region", textBoxRegionProducer.Text },
                         { "pays", textBoxPaysProducer.Text },
                         { "reputation", textBoxReputationProducer.Text },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "fournisseurId", comboBoxFournisseurProducer.Text },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)
@@ -367,7 +530,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "nomFournisseur", textBoxNomFournisseur.Text },
                             { "tel", textBoxTelephoneFournisseur.Text },
@@ -379,20 +542,20 @@ namespace appNegoSudWinForms.Forms
                             { "region", textBoxRegionFournisseur.Text },
                             { "pays", textBoxPaysFournisseur.Text },
                             { "reputation", textBoxReputationFournisseur.Text },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             //{ "fournisseurId", comboBoxFournisseurProducer.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlFournisseur, content);
 
 
+
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Fournisseur fournisseur = JsonConvert.DeserializeObject<Fournisseur>(result);
-                        string[] row = new string[] { fournisseur.NomFournisseur, fournisseur.Tel, fournisseur.Fix, fournisseur.Email, fournisseur.Rue, fournisseur.Adresse, fournisseur.Ville, fournisseur.Region, fournisseur.Reputation };
-
                         MessageBox.Show("Le fournisseur a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormUtilisateur_Load(sender, e);
@@ -444,16 +607,15 @@ namespace appNegoSudWinForms.Forms
                         { "region", textBoxRegionFournisseur.Text },
                         { "pays", textBoxPaysFournisseur.Text },
                         { "reputation", textBoxReputationFournisseur.Text },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         //{ "fournisseurId", comboBoxFournisseurProducer.Text },
                     };
 
 
                     string json = JsonConvert.SerializeObject(values);
                     HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-
-
                     HttpResponseMessage response = await client.PutAsync(urlEdit, content);
 
                     if (response.IsSuccessStatusCode)
@@ -528,5 +690,6 @@ namespace appNegoSudWinForms.Forms
             }
         }
 
+ 
     }
 }

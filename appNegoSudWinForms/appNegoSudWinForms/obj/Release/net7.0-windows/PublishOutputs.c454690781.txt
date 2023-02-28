@@ -1,0 +1,9 @@
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.exe
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.dll
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.deps.json
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.runtimeconfig.json
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.dll.config
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\appNegoSudWinForms.pdb
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\FontAwesome.Sharp.dll
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\THIEBAUD\Documents\GitHub\Master-ASP.Net-Project\appNegoSudWinForms\appNegoSudWinForms\bin\Release\net7.0-windows\publish\RestSharp.dll

@@ -2,6 +2,8 @@ using appNegoSudWinForms.Forms;
 using appNegoSudWinForms.Models;
 using FontAwesome.Sharp;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 
@@ -29,7 +31,45 @@ namespace appNegoSudWinForms
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            labelHomeDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+            buttonAfficherInventaires(null, null);
         }
+
+        string urlInventaire = "http://195.154.113.18:8000/api/Inventaires/";
+       
+        string token = Properties.Settings.Default.token;
+
+
+        private async void buttonAfficherInventaires(object sender, EventArgs e)
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                try
+                {
+                    HttpResponseMessage responseInventaire = await client.GetAsync(urlInventaire);
+                    responseInventaire.EnsureSuccessStatusCode();
+
+                    var inventaires = JsonConvert.DeserializeObject<List<Inventaire>>(await responseInventaire.Content.ReadAsStringAsync());
+
+                    foreach (var inventaire in inventaires)
+                    {
+                        if (inventaire.QuantiteStock < 15)
+                        {
+                            MessageBox.Show($"Nom : {inventaire.Nom}, Quantité de stock : {inventaire.QuantiteStock}", "NeoSud - Alerte Stockage");
+                        }
+                    }
+
+                }
+                catch (HttpRequestException ex)
+                {
+                    MessageBox.Show($"Erreur lors de la récupération des inventaires : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
         //Structs
         private struct RGBColors
@@ -39,9 +79,7 @@ namespace appNegoSudWinForms
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(249, 88, 155);
-
-            //Pas utiliser (Optionel)
-            //public static Color color6 = Color.FromArgb(24, 161, 251);
+           // public static Color color6 = Color.FromArgb(24, 161, 251);
 
         }
 
@@ -118,7 +156,7 @@ namespace appNegoSudWinForms
         private void btnCategorie_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new FormCategorie());
+            OpenChildForm(new Catégories());
         }
 
         private void btnUtilisateur_Click(object sender, EventArgs e)
@@ -148,7 +186,7 @@ namespace appNegoSudWinForms
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
-            lblTitleChildForm.Text = "Home";
+            lblTitleChildForm.Text = "Accueil";
         }
 
         //Drag Form
@@ -182,5 +220,19 @@ namespace appNegoSudWinForms
             WindowState = FormWindowState.Minimized;
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+
+            string timeString = currentTime.ToString("HH:mm:ss");
+
+            labelHomeHeure.Text = timeString;
+
+        }
+
+        private void iconButtonAlerteForm_Click(object sender, EventArgs e)
+        {
+            buttonAfficherInventaires(sender, e);
+        }
     }
 }

@@ -32,20 +32,20 @@ namespace appNegoSudWinForms.Models
 
         // Foreign keys
         public int? ProducteurId { get; set; }
-        public Producteur? Producteur { get; set; }
+     //   public Producteur? Producteur { get; set; }
         public int? CategorieId { get; set; }
-        public Categorie? Categorie { get; set; }
+     //   public Categorie? Categorie { get; set; }
 
-        public Produit(int id, string? sKU, string? nomProduit, string? resumee, string? description, float? prix_unitaire, float? prix_carton, float? tVA, float? remise, string? imagePrincipal, string? ancien, string? region, string? couleur, string? raisins, float? alcool, string? aliments, string? conservation, string? expiration, float volume, DateTime dateCreation, DateTime dateModification, int? producteurId, Producteur? producteur, int? categorieId, Categorie? categorie)
+        public Produit(int id, string? sku, string? nomProduit, string? resumee, string? description, float? prix_unitaire, float? prix_carton, float? tva, float? remise, string? imagePrincipal, string? ancien, string? region, string? couleur, string? raisins, float? alcool, string? aliments, string? conservation, string? expiration, float volume, DateTime dateCreation, DateTime dateModification, int? producteurId, Producteur? producteur, int? categorieId, Categorie? categorie)
         {
             Id = id;
-            SKU = sKU;
+            SKU = sku;
             NomProduit = nomProduit;
             Resumee = resumee;
             Description = description;
             Prix_unitaire = prix_unitaire;
             Prix_carton = prix_carton;
-            TVA = tVA;
+            TVA = tva;
             Remise = remise;
             ImagePrincipal = imagePrincipal;
             Ancien = ancien;
@@ -60,9 +60,9 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             ProducteurId = producteurId;
-            Producteur = producteur;
+         //   Producteur = producteur;
             CategorieId = categorieId;
-            Categorie = categorie;
+         //   Categorie = categorie;
         }
     }
 }

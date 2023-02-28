@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rH/UktswX9G3x/ySyjCvcsLbXcnJEelNIfucDOsQMgY3sZuHJmrexf18+ie79FMpxg/Zs3bjzxtrXcwrV28Svw==",
+  "dgSpecHash": "uKfE60ICvgWlOLzVsyndupJn58zMQ5vvjOIOjU8DKP5UBH9Q2PTkoUT/acuTpMO5ZGabaUleYo93+fjN6azvZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\THIEBAUD\\Documents\\GitHub\\Master-ASP.Net-Project\\appNegoSudWinForms\\appNegoSudWinForms\\appNegoSudWinForms.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\THIEBAUD\\.nuget\\packages\\autoupdater.net.official\\1.7.6\\autoupdater.net.official.1.7.6.nupkg.sha512",
     "C:\\Users\\THIEBAUD\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512",
+    "C:\\Users\\THIEBAUD\\.nuget\\packages\\microsoft.web.webview2\\1.0.1418.22\\microsoft.web.webview2.1.0.1418.22.nupkg.sha512",
     "C:\\Users\\THIEBAUD\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\THIEBAUD\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512"
   ],

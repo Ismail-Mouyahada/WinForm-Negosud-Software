@@ -6,6 +6,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +24,6 @@ namespace appNegoSudWinForms.Forms
         string urlMagasin = "http://195.154.113.18:8000/api/Magasins/";
         string urlCatalogue = "http://195.154.113.18:8000/api/Catalogues/";
         string token = Properties.Settings.Default.token;
-
 
         public FormInventaire()
         {
@@ -56,6 +57,7 @@ namespace appNegoSudWinForms.Forms
                     {
                         string result1 = await responseProduit.Content.ReadAsStringAsync();
                         List<Produit?> produits = JsonConvert.DeserializeObject<List<Produit?>>(result1);
+                      
                         dataGridViewProduit.DataSource = produits;
                     }
                     else
@@ -124,7 +126,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "nom", textBoxNomInventaire.Text },
                             { "appelation", textBoxAppelationInventaire.Text },
@@ -133,21 +135,20 @@ namespace appNegoSudWinForms.Forms
                             { "millesime", textBoxMillesimeInventaire.Text },
                             { "position", textBoxPositionInventaire.Text },
                             { "quantiteStock", textBoxQuantiteStockInventaire.Text },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "magasinId", textBoxmagasinIdInventaire.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlInventaire, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Inventaire inventaire = JsonConvert.DeserializeObject<Inventaire>(result);
-
-                        string[] row = new string[] { inventaire.Nom, inventaire.Appelation, inventaire.Couleur, inventaire.Classement, inventaire.Millesime, inventaire.Position };
-
+               
                         MessageBox.Show("L'inventaire a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
@@ -184,7 +185,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "nom", textBoxNomInventaire.Text },
@@ -194,6 +195,8 @@ namespace appNegoSudWinForms.Forms
                         { "millesime", textBoxMillesimeInventaire.Text },
                         { "position", textBoxPositionInventaire.Text },
                         { "quantiteStock", textBoxQuantiteStockInventaire.Text },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "magasinId", textBoxmagasinIdInventaire.Text },
                     };
 
@@ -323,7 +326,21 @@ namespace appNegoSudWinForms.Forms
                     // La conversion a échoué, gérez l'erreur selon vos besoins
                 }
 
-                //Manque Image
+
+                string imagePath = row.Cells[9].Value.ToString(); // Récupérer le chemin de l'image depuis la cellule
+
+                using (var client = new WebClient())
+                {
+                    var imageBytes = client.DownloadData(imagePath);
+                    using (var stream = new MemoryStream(imageBytes))
+                    {
+                        var image = Image.FromStream(stream);
+                        pictureBoxProduit.Image = image;
+                    }
+                }
+
+
+                textBoxImageProduit.Text = row.Cells[9].Value.ToString();
                 textBoxAncienProduit.Text = row.Cells[10].Value.ToString();
                 textBoxRegionProduit.Text = row.Cells[11].Value.ToString();
                 textBoxCouleurProduit.Text = row.Cells[12].Value.ToString();
@@ -350,58 +367,58 @@ namespace appNegoSudWinForms.Forms
                     // La conversion a échoué, gérez l'erreur selon vos besoins
                 }
                 textBoxProducteurIdProduit.Text = row.Cells[21].Value.ToString();
-                textBoxCategorieIdProduit.Text = row.Cells[23].Value.ToString();
+                textBoxCategorieIdProduit.Text = row.Cells[22].Value.ToString();
 
                 //  selectedName = textBoxNomCategorie.Text;
                 // MessageBox.Show("L'ID de la catégorie sélectionnée est : " + selectedId);
             }
             else { }
         }
-
+        
         private async void btnAddProduit_Click(object sender, EventArgs e)
         {
+
             using (var client = new HttpClient())
             {
 
                 try
                 {
-
-                    var values = new Dictionary<string, string>
+                    
+                    var values = new Dictionary<dynamic, dynamic>
                         {
-                            { "sKU", textBoxSkuProduit.Text },
+                            { "sku", textBoxSkuProduit.Text },
                             { "nomProduit", textBoxNomProduitProduit.Text },
                             { "resumee", textBoxResumeeProduit.Text },
                             { "description", textBoxDescriptionProduit.Text },
-                            { "prix_unitaire", textBoxPrixUnitaireProduit.Text },
-                            { "prix_carton", textBoxPrixCartonProduit.Text },
-                            { "tVA", textBoxTvaProduit.Text },
-                            { "remise", textBoxRemiseProduit.Text },
-                         //   { "imagePrincipal", textBoxmagasinIdInventaire.Text },
+                            { "prix_unitaire", float.Parse(textBoxPrixUnitaireProduit.Text) },
+                            { "prix_carton", float.Parse(textBoxPrixCartonProduit.Text) },
+                            { "tva", float.Parse(textBoxTvaProduit.Text) },
+                            { "remise", float.Parse(textBoxRemiseProduit.Text) },
+                            { "imagePrincipal", textBoxImageProduit.Text },
                             { "ancien", textBoxAncienProduit.Text },
                             { "region", textBoxRegionProduit.Text },
                             { "couleur", textBoxCouleurProduit.Text },
                             { "raisins", textBoxRaisinsProduit.Text },
-                            { "alcool", textBoxAlcoolProduit.Text },
+                            { "alcool", float.Parse(textBoxAlcoolProduit.Text) },
                             { "aliments", textBoxAlimentProduit.Text },
                             { "conservation", textBoxConservationProduit.Text },
                             { "expiration", textBoxExpirationProduit.Text },
-                            { "volume", textBoxVolumeProduit.Text },
+                            { "volume", float.Parse(textBoxVolumeProduit.Text) },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "producteurId", textBoxProducteurIdProduit.Text },
                             { "categorieId", textBoxCategorieIdProduit.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlProduit, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Produit produit = JsonConvert.DeserializeObject<Produit>(result);
-
-                        string[] row = new string[] { produit.SKU, produit.NomProduit, produit.Resumee, produit.Description, produit.Ancien, produit.Region, produit.Couleur, produit.Raisins, produit.Aliments, produit.Conservation, produit.Expiration };
-
+             
                         MessageBox.Show("Le produit a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
@@ -414,6 +431,7 @@ namespace appNegoSudWinForms.Forms
                         textBoxPrixCartonProduit.Clear();
                         textBoxTvaProduit.Clear();
                         textBoxRemiseProduit.Clear();
+                        textBoxImageProduit.Clear();
                         textBoxAncienProduit.Clear();
                         textBoxRegionProduit.Clear();
                         textBoxCouleurProduit.Clear();
@@ -452,24 +470,26 @@ namespace appNegoSudWinForms.Forms
                     var values = new Dictionary<string, dynamic>
                     {
                         { "id", selectedId },
-                        { "sKU", textBoxSkuProduit.Text },
+                        { "sku", textBoxSkuProduit.Text },
                         { "nomProduit", textBoxNomProduitProduit.Text },
                         { "resumee", textBoxResumeeProduit.Text },
                         { "description", textBoxDescriptionProduit.Text },
-                        { "prix_unitaire", textBoxPrixUnitaireProduit.Text },
-                        { "prix_carton", textBoxPrixCartonProduit.Text },
-                        { "tVA", textBoxTvaProduit.Text },
-                        { "remise", textBoxRemiseProduit.Text },
-                        { "imagePrincipal", textBoxmagasinIdInventaire.Text },
+                        { "prix_unitaire", float.Parse(textBoxPrixUnitaireProduit.Text) },
+                        { "prix_carton", float.Parse(textBoxPrixCartonProduit.Text) },
+                        { "tva", float.Parse(textBoxTvaProduit.Text) },
+                        { "remise", float.Parse(textBoxRemiseProduit.Text) },
+                        { "imagePrincipal", textBoxImageProduit.Text },
                         { "ancien", textBoxAncienProduit.Text },
                         { "region", textBoxRegionProduit.Text },
                         { "couleur", textBoxCouleurProduit.Text },
                         { "raisins", textBoxRaisinsProduit.Text },
-                        { "alcool", textBoxAlcoolProduit.Text },
+                        { "alcool", float.Parse(textBoxAlcoolProduit.Text) },
                         { "aliments", textBoxAlimentProduit.Text },
                         { "conservation", textBoxConservationProduit.Text },
                         { "expiration", textBoxExpirationProduit.Text },
-                        { "volume", textBoxVolumeProduit.Text },
+                        { "volume", float.Parse(textBoxVolumeProduit.Text) },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "producteurId", textBoxProducteurIdProduit.Text },
                         { "categorieId", textBoxCategorieIdProduit.Text },
                     };
@@ -497,6 +517,7 @@ namespace appNegoSudWinForms.Forms
                         textBoxPrixCartonProduit.Clear();
                         textBoxTvaProduit.Clear();
                         textBoxRemiseProduit.Clear();
+                        textBoxImageProduit.Clear();
                         textBoxAncienProduit.Clear();
                         textBoxRegionProduit.Clear();
                         textBoxCouleurProduit.Clear();
@@ -548,6 +569,7 @@ namespace appNegoSudWinForms.Forms
                         textBoxPrixCartonProduit.Clear();
                         textBoxTvaProduit.Clear();
                         textBoxRemiseProduit.Clear();
+                        textBoxImageProduit.Clear();
                         textBoxAncienProduit.Clear();
                         textBoxRegionProduit.Clear();
                         textBoxCouleurProduit.Clear();
@@ -607,7 +629,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, string>
+                    var values = new Dictionary<dynamic, dynamic>
                         {
                             { "nomMagasin", textBoxNomMagasin.Text },
                             { "email", textBoxEmailMagasin.Text },
@@ -618,21 +640,21 @@ namespace appNegoSudWinForms.Forms
                             { "codePostal", textBoxCodePostalMagasin.Text },
                             { "region", textBoxRegionMagasin.Text },
                             { "pays", textBoxPaysMagasin.Text },
+                            { "DateCreation", DateTime.Now },
+                            { "DateModification", DateTime.Now },
                             { "producteurId", textBoxProducteurIdMagasin.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlMagasin, content);
 
 
+
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Magasin magasin = JsonConvert.DeserializeObject<Magasin>(result);
-
-                        string[] row = new string[] { magasin.NomMagasin, magasin.Email, magasin.Tel, magasin.Fix, magasin.Adresse, magasin.Rue, magasin.CodePostal, magasin.Region, magasin.Pays };
-
+    
                         MessageBox.Show("Le magasin a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);
@@ -671,7 +693,7 @@ namespace appNegoSudWinForms.Forms
                 try
                 {
 
-                    var values = new Dictionary<string, dynamic>
+                    var values = new Dictionary<dynamic, dynamic>
                     {
                         { "id", selectedId },
                         { "nomMagasin", textBoxNomMagasin.Text },
@@ -683,6 +705,8 @@ namespace appNegoSudWinForms.Forms
                         { "codePostal", textBoxCodePostalMagasin.Text },
                         { "region", textBoxRegionMagasin.Text },
                         { "pays", textBoxPaysMagasin.Text },
+                     //   { "DateCreation", DateTime.Now },
+                        { "DateModification", DateTime.Now },
                         { "producteurId", textBoxProducteurIdMagasin.Text },
                     };
 
@@ -800,18 +824,14 @@ namespace appNegoSudWinForms.Forms
                             { "produitId", textBoxProduitIdCatalogue.Text },
                         };
 
-                    var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
+                    string json = JsonConvert.SerializeObject(values);
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     HttpResponseMessage response = await client.PostAsync(urlCatalogue, content);
 
-
                     if (response.IsSuccessStatusCode)
                     {
-                        string result = await response.Content.ReadAsStringAsync();
-                        Catalogue catalogue = JsonConvert.DeserializeObject<Catalogue>(result);
-
-                        string[] row = new string[] { catalogue.Reference, catalogue.Image };
-
+            
                         MessageBox.Show("Le catalogue a été ajouté avec succès !", "NeoSud - Confirmation");
 
                         FormInventaire_Load(sender, e);

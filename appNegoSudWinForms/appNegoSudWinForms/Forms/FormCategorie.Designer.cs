@@ -1,6 +1,6 @@
 ﻿namespace appNegoSudWinForms.Forms
 {
-    partial class FormCategorie
+    partial class Catégories
     {
         /// <summary>
         /// Required designer variable.
@@ -201,15 +201,15 @@
             this.dataGridViewCategorie.TabIndex = 0;
             this.dataGridViewCategorie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategorie_CellClick);
             // 
-            // FormCategorie
+            // Catégories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(799, 481);
             this.Controls.Add(this.tabControl1);
-            this.Name = "FormCategorie";
-            this.Text = "FormCategorie";
+            this.Name = "Catégories";
+            this.Text = "Catégories";
             this.Load += new System.EventHandler(this.FormCategorie_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

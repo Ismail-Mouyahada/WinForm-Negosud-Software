@@ -16,7 +16,7 @@ namespace appNegoSudWinForms.Models
 
         // Foreign keys
         public int? CommandeId { get; set; }
-        public Commande? Commande { get; set; }
+     //   public Commande? Commande { get; set; }
 
         public Facture(int id, string? reference, float factureTotal, DateTime dateCreation, DateTime dateModification, int? commandeId, Commande? commande)
         {
@@ -26,7 +26,7 @@ namespace appNegoSudWinForms.Models
             DateCreation = dateCreation;
             DateModification = dateModification;
             CommandeId = commandeId;
-            Commande = commande;
+       //     Commande = commande;
         }
     }
 }

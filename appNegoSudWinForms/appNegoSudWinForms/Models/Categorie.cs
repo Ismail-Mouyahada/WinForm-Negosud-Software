@@ -11,13 +11,13 @@ namespace appNegoSudWinForms.Models
         public int Id { get; set; }
         public string? NameCategorie { get; set; }
 
-        public ICollection<Produit>? Produit { get; set; }
+  //      public ICollection<Produit>? Produit { get; set; }
 
         public Categorie(int id, string? nameCategorie, ICollection<Produit>? produit)
         {
             Id = id;
             NameCategorie = nameCategorie;
-            Produit = produit;
+   //         Produit = produit;
         }
     }
 }

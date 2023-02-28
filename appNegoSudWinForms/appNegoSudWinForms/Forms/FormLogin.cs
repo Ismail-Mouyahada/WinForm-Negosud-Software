@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace appNegoSudWinForms.Forms
 {
+
     public partial class FormLogin : Form
     {
        // private string token;
@@ -22,28 +23,7 @@ namespace appNegoSudWinForms.Forms
 
         private async void btnConnexion_Click(object sender, EventArgs e)
         {
-            // if (textBoxEmail.Text == "")
-            // {
-            //     MessageBox.Show("Entrer une adresse Email !!", "NeoSud");
-            // }
-            // else if (textBoxPassword.Text == "")
-            // {
-            //     MessageBox.Show("Entrer Mot de Passe !!", "NeoSud");
-            // }
-            // else if (textBoxEmail.Text == "test" && textBoxPassword.Text == "test")
-            // {
-            //     this.Hide();
-            //     Form formMain = new FormMainMenu();
-            //     formMain.ShowDialog();
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Compte ou mot de passe incorrecte !!", "NeoSud");
-            // }
-
-            // URL pour la requête POST de connexion
-            
-
+           
         string url = "http://195.154.113.18:8000/api/Auth";
 
           
@@ -68,18 +48,22 @@ namespace appNegoSudWinForms.Forms
                     string result = await response.Content.ReadAsStringAsync();
                     dynamic data = JsonConvert.DeserializeObject(result);
                     string token = data["access_Token"];
+                    int role = data["role"];
+                    if (role == 3)
+                    {
+                        // Stockage du jeton dans les données d'application
+                        Properties.Settings.Default.token = token;
+                        Properties.Settings.Default.Save();
 
-                    // Stockage du jeton dans les données d'application
-                    Properties.Settings.Default.token = token;
-                    Properties.Settings.Default.Save();
-
-                    //string settingValue = Properties.Settings.Default.token;
-
-                    MessageBox.Show("Connexion réussie");
-                    this.Hide();
-                    Form formMain = new FormMainMenu();
-                    formMain.ShowDialog();
-
+                       // MessageBox.Show("Connexion réussie");
+                        this.Hide();
+                        Form formMain = new FormMainMenu();
+                        formMain.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vous n'êtes pas autorisé à accéder à cette application.");
+                    }
                 }
                 else
                 {

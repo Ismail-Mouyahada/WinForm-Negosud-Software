@@ -15,9 +15,9 @@ namespace appNegoSudWinForms.Models
         public DateTime DateModification { get; set; }
 
         public int? UtilisateurId { get; set; }
-        public Utilisateur? Utilisateur { get; set; }
+   //     public Utilisateur? Utilisateur { get; set; }
 
-        public ICollection<ElemCommande> ElemCommandes { get; } = new List<ElemCommande>();
+    //    public ICollection<ElemCommande> ElemCommandes { get; } = new List<ElemCommande>();
 
         public Commande(int id, string? statut, float remise, DateTime? dateCommande, DateTime dateModification, int? utilisateurId, Utilisateur? utilisateur, ICollection<ElemCommande> elemCommandes)
         {
@@ -27,8 +27,8 @@ namespace appNegoSudWinForms.Models
             DateCommande = dateCommande;
             DateModification = dateModification;
             UtilisateurId = utilisateurId;
-            Utilisateur = utilisateur;
-            ElemCommandes = elemCommandes;
+       //     Utilisateur = utilisateur;
+     //       ElemCommandes = elemCommandes;
         }
     }
 }
